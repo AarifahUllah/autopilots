@@ -1,0 +1,193 @@
+[rosmaster.main][INFO] 2024-10-29 15:02:14,564: initialization complete, waiting for shutdown
+[rosmaster.main][INFO] 2024-10-29 15:02:14,564: Starting ROS Master Node
+[xmlrpc][INFO] 2024-10-29 15:02:14,567: XML-RPC server binding to 0.0.0.0:11311
+[xmlrpc][INFO] 2024-10-29 15:02:14,567: Started XML-RPC server [http://DESKTOP-R7B102G:11311/]
+[rosmaster.master][INFO] 2024-10-29 15:02:14,568: Master initialized: port[11311], uri[http://DESKTOP-R7B102G:11311/]
+[xmlrpc][INFO] 2024-10-29 15:02:14,568: xml rpc node: starting XML-RPC server
+[rosmaster.master][INFO] 2024-10-29 15:02:14,603: +PARAM [/run_id] by /roslaunch
+[rosmaster.master][INFO] 2024-10-29 15:02:14,606: +PARAM [/roslaunch/uris/host_desktop_r7b102g__42943] by /roslaunch
+[rosmaster.master][INFO] 2024-10-29 15:02:14,674: +PARAM [/rosversion] by /roslaunch
+[rosmaster.master][INFO] 2024-10-29 15:02:14,674: +PARAM [/rosdistro] by /roslaunch
+[rosmaster.master][INFO] 2024-10-29 15:02:14,675: +PARAM [/use_sim_time] by /roslaunch
+[rosmaster.master][INFO] 2024-10-29 15:02:14,675: +PARAM [/gazebo/enable_ros_network] by /roslaunch
+[rosmaster.master][INFO] 2024-10-29 15:02:14,821: +SERVICE [/rosout/get_loggers] /rosout http://DESKTOP-R7B102G:39707/
+[rosmaster.master][INFO] 2024-10-29 15:02:14,823: +SERVICE [/rosout/set_logger_level] /rosout http://DESKTOP-R7B102G:39707/
+[rosmaster.master][INFO] 2024-10-29 15:02:14,829: +SUB [/clock] /rosout http://DESKTOP-R7B102G:39707/
+[rosmaster.master][INFO] 2024-10-29 15:02:14,836: +PUB [/rosout_agg] /rosout http://DESKTOP-R7B102G:39707/
+[rosmaster.master][INFO] 2024-10-29 15:02:14,840: +SUB [/rosout] /rosout http://DESKTOP-R7B102G:39707/
+[rosmaster.master][INFO] 2024-10-29 15:02:16,680: +PUB [/rosout] /gazebo http://DESKTOP-R7B102G:36385/
+[rosmaster.master][INFO] 2024-10-29 15:02:16,681: +SERVICE [/gazebo/get_loggers] /gazebo http://DESKTOP-R7B102G:36385/
+[rosmaster.master][INFO] 2024-10-29 15:02:16,683: +SERVICE [/gazebo/set_logger_level] /gazebo http://DESKTOP-R7B102G:36385/
+[rosmaster.master][INFO] 2024-10-29 15:02:16,690: +SUB [/clock] /gazebo http://DESKTOP-R7B102G:36385/
+[rosmaster.master][INFO] 2024-10-29 15:02:16,696: +CACHEDPARAM [/rosout_disable_topics_generation] by /gazebo
+[rosmaster.master][INFO] 2024-10-29 15:02:16,776: publisherUpdate[/rosout] -> http://DESKTOP-R7B102G:39707/ ['http://DESKTOP-R7B102G:36385/']
+[rosmaster.master][INFO] 2024-10-29 15:02:16,784: publisherUpdate[/rosout] -> http://DESKTOP-R7B102G:39707/ ['http://DESKTOP-R7B102G:36385/']: sec=0.01, result=[1, '', 0]
+[rosmaster.master][INFO] 2024-10-29 15:02:16,958: +PUB [/rosout] /gazebo_gui http://DESKTOP-R7B102G:35161/
+[rosmaster.master][INFO] 2024-10-29 15:02:16,959: +SERVICE [/gazebo_gui/get_loggers] /gazebo_gui http://DESKTOP-R7B102G:35161/
+[rosmaster.master][INFO] 2024-10-29 15:02:16,960: +SERVICE [/gazebo_gui/set_logger_level] /gazebo_gui http://DESKTOP-R7B102G:35161/
+[rosmaster.master][INFO] 2024-10-29 15:02:16,965: +SUB [/clock] /gazebo_gui http://DESKTOP-R7B102G:35161/
+[rosmaster.master][INFO] 2024-10-29 15:02:16,970: +CACHEDPARAM [/rosout_disable_topics_generation] by /gazebo_gui
+[rosmaster.master][INFO] 2024-10-29 15:02:16,979: publisherUpdate[/rosout] -> http://DESKTOP-R7B102G:39707/ ['http://DESKTOP-R7B102G:36385/', 'http://DESKTOP-R7B102G:35161/']
+[rosmaster.master][INFO] 2024-10-29 15:02:16,984: publisherUpdate[/rosout] -> http://DESKTOP-R7B102G:39707/ ['http://DESKTOP-R7B102G:36385/', 'http://DESKTOP-R7B102G:35161/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2024-10-29 15:04:22,680: +PUB [/clock] /gazebo http://DESKTOP-R7B102G:36385/
+[rosmaster.master][INFO] 2024-10-29 15:04:22,681: +SERVICE [/gazebo/spawn_sdf_model] /gazebo http://DESKTOP-R7B102G:36385/
+[rosmaster.master][INFO] 2024-10-29 15:04:22,683: +SERVICE [/gazebo/spawn_urdf_model] /gazebo http://DESKTOP-R7B102G:36385/
+[rosmaster.master][INFO] 2024-10-29 15:04:22,684: +SERVICE [/gazebo/delete_model] /gazebo http://DESKTOP-R7B102G:36385/
+[rosmaster.master][INFO] 2024-10-29 15:04:22,684: +SERVICE [/gazebo/delete_light] /gazebo http://DESKTOP-R7B102G:36385/
+[rosmaster.master][INFO] 2024-10-29 15:04:22,685: +SERVICE [/gazebo/get_model_properties] /gazebo http://DESKTOP-R7B102G:36385/
+[rosmaster.master][INFO] 2024-10-29 15:04:22,686: +SERVICE [/gazebo/get_model_state] /gazebo http://DESKTOP-R7B102G:36385/
+[rosmaster.master][INFO] 2024-10-29 15:04:22,686: +SERVICE [/gazebo/get_world_properties] /gazebo http://DESKTOP-R7B102G:36385/
+[rosmaster.master][INFO] 2024-10-29 15:04:22,687: +SERVICE [/gazebo/get_joint_properties] /gazebo http://DESKTOP-R7B102G:36385/
+[rosmaster.master][INFO] 2024-10-29 15:04:22,688: +SERVICE [/gazebo/get_link_properties] /gazebo http://DESKTOP-R7B102G:36385/
+[rosmaster.master][INFO] 2024-10-29 15:04:22,688: +SERVICE [/gazebo/get_link_state] /gazebo http://DESKTOP-R7B102G:36385/
+[rosmaster.master][INFO] 2024-10-29 15:04:22,689: +SERVICE [/gazebo/get_light_properties] /gazebo http://DESKTOP-R7B102G:36385/
+[rosmaster.master][INFO] 2024-10-29 15:04:22,690: +SERVICE [/gazebo/set_light_properties] /gazebo http://DESKTOP-R7B102G:36385/
+[rosmaster.master][INFO] 2024-10-29 15:04:22,691: +SERVICE [/gazebo/get_physics_properties] /gazebo http://DESKTOP-R7B102G:36385/
+[rosmaster.master][INFO] 2024-10-29 15:04:22,692: +PUB [/gazebo/link_states] /gazebo http://DESKTOP-R7B102G:36385/
+[rosmaster.master][INFO] 2024-10-29 15:04:22,693: +PUB [/gazebo/model_states] /gazebo http://DESKTOP-R7B102G:36385/
+[rosmaster.master][INFO] 2024-10-29 15:04:22,694: +PUB [/gazebo/performance_metrics] /gazebo http://DESKTOP-R7B102G:36385/
+[rosmaster.master][INFO] 2024-10-29 15:04:22,694: +SERVICE [/gazebo/set_link_properties] /gazebo http://DESKTOP-R7B102G:36385/
+[rosmaster.master][INFO] 2024-10-29 15:04:22,695: +SERVICE [/gazebo/set_physics_properties] /gazebo http://DESKTOP-R7B102G:36385/
+[rosmaster.master][INFO] 2024-10-29 15:04:22,696: +SERVICE [/gazebo/set_model_state] /gazebo http://DESKTOP-R7B102G:36385/
+[rosmaster.master][INFO] 2024-10-29 15:04:22,697: +SERVICE [/gazebo/set_model_configuration] /gazebo http://DESKTOP-R7B102G:36385/
+[rosmaster.master][INFO] 2024-10-29 15:04:22,699: +SERVICE [/gazebo/set_joint_properties] /gazebo http://DESKTOP-R7B102G:36385/
+[rosmaster.master][INFO] 2024-10-29 15:04:22,699: +SERVICE [/gazebo/set_link_state] /gazebo http://DESKTOP-R7B102G:36385/
+[rosmaster.master][INFO] 2024-10-29 15:04:22,702: +SUB [/gazebo/set_link_state] /gazebo http://DESKTOP-R7B102G:36385/
+[rosmaster.master][INFO] 2024-10-29 15:04:22,704: +SUB [/gazebo/set_model_state] /gazebo http://DESKTOP-R7B102G:36385/
+[rosmaster.master][INFO] 2024-10-29 15:04:22,705: +SERVICE [/gazebo/pause_physics] /gazebo http://DESKTOP-R7B102G:36385/
+[rosmaster.master][INFO] 2024-10-29 15:04:22,706: +SERVICE [/gazebo/unpause_physics] /gazebo http://DESKTOP-R7B102G:36385/
+[rosmaster.master][INFO] 2024-10-29 15:04:22,706: +SERVICE [/gazebo/apply_body_wrench] /gazebo http://DESKTOP-R7B102G:36385/
+[rosmaster.master][INFO] 2024-10-29 15:04:22,707: +SERVICE [/gazebo/apply_joint_effort] /gazebo http://DESKTOP-R7B102G:36385/
+[rosmaster.master][INFO] 2024-10-29 15:04:22,708: +SERVICE [/gazebo/clear_joint_forces] /gazebo http://DESKTOP-R7B102G:36385/
+[rosmaster.master][INFO] 2024-10-29 15:04:22,709: +SERVICE [/gazebo/clear_body_wrenches] /gazebo http://DESKTOP-R7B102G:36385/
+[rosmaster.master][INFO] 2024-10-29 15:04:22,710: +SERVICE [/gazebo/reset_simulation] /gazebo http://DESKTOP-R7B102G:36385/
+[rosmaster.master][INFO] 2024-10-29 15:04:22,711: +SERVICE [/gazebo/reset_world] /gazebo http://DESKTOP-R7B102G:36385/
+[rosmaster.master][INFO] 2024-10-29 15:04:22,715: +CACHEDPARAM [/rosout/omit_topics] by /rosout
+[rosmaster.master][INFO] 2024-10-29 15:04:22,719: +SERVICE [/gazebo/set_parameters] /gazebo http://DESKTOP-R7B102G:36385/
+[rosmaster.master][INFO] 2024-10-29 15:04:22,720: +PUB [/gazebo/parameter_descriptions] /gazebo http://DESKTOP-R7B102G:36385/
+[rosmaster.master][INFO] 2024-10-29 15:04:22,721: +PUB [/gazebo/parameter_updates] /gazebo http://DESKTOP-R7B102G:36385/
+[rosmaster.master][INFO] 2024-10-29 15:04:22,726: publisherUpdate[/clock] -> http://DESKTOP-R7B102G:39707/ ['http://DESKTOP-R7B102G:36385/']
+[rosmaster.master][INFO] 2024-10-29 15:04:22,726: publisherUpdate[/clock] -> http://DESKTOP-R7B102G:36385/ ['http://DESKTOP-R7B102G:36385/']
+[rosmaster.master][INFO] 2024-10-29 15:04:22,735: publisherUpdate[/clock] -> http://DESKTOP-R7B102G:36385/ ['http://DESKTOP-R7B102G:36385/']: sec=0.01, result=[1, '', 0]
+[rosmaster.master][INFO] 2024-10-29 15:04:22,736: publisherUpdate[/clock] -> http://DESKTOP-R7B102G:39707/ ['http://DESKTOP-R7B102G:36385/']: sec=0.01, result=[1, '', 0]
+[rosmaster.master][INFO] 2024-10-29 15:04:22,737: publisherUpdate[/clock] -> http://DESKTOP-R7B102G:35161/ ['http://DESKTOP-R7B102G:36385/']
+[rosmaster.master][INFO] 2024-10-29 15:04:22,739: +PARAM [/gazebo/time_step] by /gazebo
+[rosmaster.master][INFO] 2024-10-29 15:04:22,741: +PARAM [/gazebo/max_update_rate] by /gazebo
+[rosmaster.master][INFO] 2024-10-29 15:04:22,742: +PARAM [/gazebo/gravity_x] by /gazebo
+[rosmaster.master][INFO] 2024-10-29 15:04:22,742: publisherUpdate[/clock] -> http://DESKTOP-R7B102G:35161/ ['http://DESKTOP-R7B102G:36385/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2024-10-29 15:04:22,743: +PARAM [/gazebo/gravity_y] by /gazebo
+[rosmaster.master][INFO] 2024-10-29 15:04:22,744: +PARAM [/gazebo/gravity_z] by /gazebo
+[rosmaster.master][INFO] 2024-10-29 15:04:22,745: +PARAM [/gazebo/auto_disable_bodies] by /gazebo
+[rosmaster.master][INFO] 2024-10-29 15:04:22,746: +PARAM [/gazebo/sor_pgs_precon_iters] by /gazebo
+[rosmaster.master][INFO] 2024-10-29 15:04:22,750: +PARAM [/gazebo/sor_pgs_iters] by /gazebo
+[rosmaster.master][INFO] 2024-10-29 15:04:22,751: +PARAM [/gazebo/sor_pgs_w] by /gazebo
+[rosmaster.master][INFO] 2024-10-29 15:04:22,752: +PARAM [/gazebo/sor_pgs_rms_error_tol] by /gazebo
+[rosmaster.master][INFO] 2024-10-29 15:04:22,753: +PARAM [/gazebo/cfm] by /gazebo
+[rosmaster.master][INFO] 2024-10-29 15:04:22,754: +PARAM [/gazebo/erp] by /gazebo
+[rosmaster.master][INFO] 2024-10-29 15:04:22,754: +PARAM [/gazebo/contact_surface_layer] by /gazebo
+[rosmaster.master][INFO] 2024-10-29 15:04:22,756: +PARAM [/gazebo/contact_max_correcting_vel] by /gazebo
+[rosmaster.master][INFO] 2024-10-29 15:04:22,757: +PARAM [/gazebo/max_contacts] by /gazebo
+[rosmaster.master][INFO] 2024-10-29 15:04:22,762: +PARAM [/gazebo/time_step] by /gazebo
+[rosmaster.master][INFO] 2024-10-29 15:04:22,763: +PARAM [/gazebo/max_update_rate] by /gazebo
+[rosmaster.master][INFO] 2024-10-29 15:04:22,764: +PARAM [/gazebo/gravity_x] by /gazebo
+[rosmaster.master][INFO] 2024-10-29 15:04:22,765: +PARAM [/gazebo/gravity_y] by /gazebo
+[rosmaster.master][INFO] 2024-10-29 15:04:22,767: +PARAM [/gazebo/gravity_z] by /gazebo
+[rosmaster.master][INFO] 2024-10-29 15:04:22,768: +PARAM [/gazebo/auto_disable_bodies] by /gazebo
+[rosmaster.master][INFO] 2024-10-29 15:04:22,769: +PARAM [/gazebo/sor_pgs_precon_iters] by /gazebo
+[rosmaster.master][INFO] 2024-10-29 15:04:22,769: +PARAM [/gazebo/sor_pgs_iters] by /gazebo
+[rosmaster.master][INFO] 2024-10-29 15:04:22,770: +PARAM [/gazebo/sor_pgs_w] by /gazebo
+[rosmaster.master][INFO] 2024-10-29 15:04:22,771: +PARAM [/gazebo/sor_pgs_rms_error_tol] by /gazebo
+[rosmaster.master][INFO] 2024-10-29 15:04:22,771: +PARAM [/gazebo/cfm] by /gazebo
+[rosmaster.master][INFO] 2024-10-29 15:04:22,772: +PARAM [/gazebo/erp] by /gazebo
+[rosmaster.master][INFO] 2024-10-29 15:04:22,772: +PARAM [/gazebo/contact_surface_layer] by /gazebo
+[rosmaster.master][INFO] 2024-10-29 15:04:22,773: +PARAM [/gazebo/contact_max_correcting_vel] by /gazebo
+[rosmaster.master][INFO] 2024-10-29 15:04:22,774: +PARAM [/gazebo/max_contacts] by /gazebo
+[rosmaster.master][INFO] 2024-10-29 15:27:04,962: -SUB [/gazebo/set_link_state] /gazebo http://DESKTOP-R7B102G:36385/
+[rosmaster.master][INFO] 2024-10-29 15:27:04,977: -SUB [/gazebo/set_model_state] /gazebo http://DESKTOP-R7B102G:36385/
+[rosmaster.master][INFO] 2024-10-29 15:27:04,979: -PUB [/clock] /gazebo http://DESKTOP-R7B102G:36385/
+[rosmaster.master][INFO] 2024-10-29 15:27:04,984: -PUB [/gazebo/link_states] /gazebo http://DESKTOP-R7B102G:36385/
+[rosmaster.master][INFO] 2024-10-29 15:27:05,031: -PUB [/gazebo/model_states] /gazebo http://DESKTOP-R7B102G:36385/
+[rosmaster.master][INFO] 2024-10-29 15:27:05,032: -PUB [/gazebo/performance_metrics] /gazebo http://DESKTOP-R7B102G:36385/
+[rosmaster.master][INFO] 2024-10-29 15:27:05,035: -SERVICE [/gazebo/spawn_sdf_model] /gazebo rosrpc://DESKTOP-R7B102G:44627
+[rosmaster.master][INFO] 2024-10-29 15:27:05,036: publisherUpdate[/clock] -> http://DESKTOP-R7B102G:39707/ []
+[rosmaster.master][INFO] 2024-10-29 15:27:05,043: -SERVICE [/gazebo/spawn_urdf_model] /gazebo rosrpc://DESKTOP-R7B102G:44627
+[rosmaster.master][INFO] 2024-10-29 15:27:05,043: publisherUpdate[/clock] -> http://DESKTOP-R7B102G:36385/ []
+[rosmaster.master][INFO] 2024-10-29 15:27:05,047: publisherUpdate[/clock] -> http://DESKTOP-R7B102G:39707/ []: sec=0.01, result=[1, '', 0]
+[rosmaster.master][INFO] 2024-10-29 15:27:05,048: -SERVICE [/gazebo/delete_model] /gazebo rosrpc://DESKTOP-R7B102G:44627
+[rosmaster.master][INFO] 2024-10-29 15:27:05,048: publisherUpdate[/clock] -> http://DESKTOP-R7B102G:35161/ []
+[rosmaster.master][INFO] 2024-10-29 15:27:05,051: -SERVICE [/gazebo/delete_light] /gazebo rosrpc://DESKTOP-R7B102G:44627
+[rosmaster.master][INFO] 2024-10-29 15:27:05,053: publisherUpdate[/clock] -> http://DESKTOP-R7B102G:36385/ []: sec=0.01, result=[1, '', 0]
+[rosmaster.master][INFO] 2024-10-29 15:27:05,060: publisherUpdate[/clock] -> http://DESKTOP-R7B102G:35161/ []: sec=0.01, exception=[Errno 111] Connection refused
+[rosmaster.master][INFO] 2024-10-29 15:27:05,060: -SERVICE [/gazebo/get_model_properties] /gazebo rosrpc://DESKTOP-R7B102G:44627
+[rosmaster.master][INFO] 2024-10-29 15:27:05,071: -SERVICE [/gazebo/get_model_state] /gazebo rosrpc://DESKTOP-R7B102G:44627
+[rosmaster.master][INFO] 2024-10-29 15:27:05,073: -SERVICE [/gazebo/get_world_properties] /gazebo rosrpc://DESKTOP-R7B102G:44627
+[rosmaster.master][INFO] 2024-10-29 15:27:05,075: -SERVICE [/gazebo/get_joint_properties] /gazebo rosrpc://DESKTOP-R7B102G:44627
+[rosmaster.master][INFO] 2024-10-29 15:27:05,077: -SERVICE [/gazebo/get_link_properties] /gazebo rosrpc://DESKTOP-R7B102G:44627
+[rosmaster.master][INFO] 2024-10-29 15:27:05,080: -SERVICE [/gazebo/get_link_state] /gazebo rosrpc://DESKTOP-R7B102G:44627
+[rosmaster.master][INFO] 2024-10-29 15:27:05,081: -SERVICE [/gazebo/get_light_properties] /gazebo rosrpc://DESKTOP-R7B102G:44627
+[rosmaster.master][INFO] 2024-10-29 15:27:05,082: -SERVICE [/gazebo/set_light_properties] /gazebo rosrpc://DESKTOP-R7B102G:44627
+[rosmaster.master][INFO] 2024-10-29 15:27:05,083: -SERVICE [/gazebo/get_physics_properties] /gazebo rosrpc://DESKTOP-R7B102G:44627
+[rosmaster.master][INFO] 2024-10-29 15:27:05,084: -SERVICE [/gazebo/set_link_properties] /gazebo rosrpc://DESKTOP-R7B102G:44627
+[rosmaster.master][INFO] 2024-10-29 15:27:05,086: -SERVICE [/gazebo/set_physics_properties] /gazebo rosrpc://DESKTOP-R7B102G:44627
+[rosmaster.master][INFO] 2024-10-29 15:27:05,087: -SERVICE [/gazebo/set_model_state] /gazebo rosrpc://DESKTOP-R7B102G:44627
+[rosmaster.master][INFO] 2024-10-29 15:27:05,088: -SERVICE [/gazebo/set_model_configuration] /gazebo rosrpc://DESKTOP-R7B102G:44627
+[rosmaster.master][INFO] 2024-10-29 15:27:05,089: -SERVICE [/gazebo/set_joint_properties] /gazebo rosrpc://DESKTOP-R7B102G:44627
+[rosmaster.master][INFO] 2024-10-29 15:27:05,090: -SERVICE [/gazebo/set_link_state] /gazebo rosrpc://DESKTOP-R7B102G:44627
+[rosmaster.master][INFO] 2024-10-29 15:27:05,096: -SERVICE [/gazebo/pause_physics] /gazebo rosrpc://DESKTOP-R7B102G:44627
+[rosmaster.master][INFO] 2024-10-29 15:27:05,098: -SERVICE [/gazebo/unpause_physics] /gazebo rosrpc://DESKTOP-R7B102G:44627
+[rosmaster.master][INFO] 2024-10-29 15:27:05,099: -SERVICE [/gazebo/apply_body_wrench] /gazebo rosrpc://DESKTOP-R7B102G:44627
+[rosmaster.master][INFO] 2024-10-29 15:27:05,099: -SERVICE [/gazebo/apply_joint_effort] /gazebo rosrpc://DESKTOP-R7B102G:44627
+[rosmaster.master][INFO] 2024-10-29 15:27:05,100: -SERVICE [/gazebo/clear_joint_forces] /gazebo rosrpc://DESKTOP-R7B102G:44627
+[rosmaster.master][INFO] 2024-10-29 15:27:05,102: -SERVICE [/gazebo/clear_body_wrenches] /gazebo rosrpc://DESKTOP-R7B102G:44627
+[rosmaster.master][INFO] 2024-10-29 15:27:05,103: -SERVICE [/gazebo/reset_simulation] /gazebo rosrpc://DESKTOP-R7B102G:44627
+[rosmaster.threadpool][ERROR] 2024-10-29 15:27:05,107: Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosmaster/threadpool.py", line 218, in run
+    result = cmd(*args)
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosmaster/master_api.py", line 210, in publisher_update_task
+    ret = xmlrpcapi(api).publisherUpdate('/master', topic, pub_uris)
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1109, in __call__
+    return self.__send(self.__name, args)
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1450, in __request
+    response = self.__transport.request(
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1153, in request
+    return self.single_request(host, handler, request_body, verbose)
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1165, in single_request
+    http_conn = self.send_request(host, handler, request_body, verbose)
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1278, in send_request
+    self.send_content(connection, request_body)
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1308, in send_content
+    connection.endheaders(request_body)
+  File "/usr/lib/python3.8/http/client.py", line 1251, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.8/http/client.py", line 1011, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.8/http/client.py", line 951, in send
+    self.connect()
+  File "/usr/lib/python3.8/http/client.py", line 922, in connect
+    self.sock = self._create_connection(
+  File "/usr/lib/python3.8/socket.py", line 808, in create_connection
+    raise err
+  File "/usr/lib/python3.8/socket.py", line 796, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+[rosmaster.master][INFO] 2024-10-29 15:27:05,108: -SERVICE [/gazebo/reset_world] /gazebo rosrpc://DESKTOP-R7B102G:44627
+[rosmaster.master][INFO] 2024-10-29 15:27:05,111: -PUB [/gazebo/parameter_descriptions] /gazebo http://DESKTOP-R7B102G:36385/
+[rosmaster.master][INFO] 2024-10-29 15:27:05,112: -PUB [/gazebo/parameter_updates] /gazebo http://DESKTOP-R7B102G:36385/
+[rosmaster.master][INFO] 2024-10-29 15:27:05,113: -SERVICE [/gazebo/set_parameters] /gazebo rosrpc://DESKTOP-R7B102G:44627
+[rosmaster.master][INFO] 2024-10-29 15:27:05,357: -PUB [/rosout] /gazebo http://DESKTOP-R7B102G:36385/
+[rosmaster.master][INFO] 2024-10-29 15:27:05,359: -SUB [/clock] /gazebo http://DESKTOP-R7B102G:36385/
+[rosmaster.master][INFO] 2024-10-29 15:27:05,360: -SERVICE [/gazebo/get_loggers] /gazebo rosrpc://DESKTOP-R7B102G:44627
+[rosmaster.master][INFO] 2024-10-29 15:27:05,360: -SERVICE [/gazebo/set_logger_level] /gazebo rosrpc://DESKTOP-R7B102G:44627
+[rosmaster.master][INFO] 2024-10-29 15:27:05,361: publisherUpdate[/rosout] -> http://DESKTOP-R7B102G:39707/ ['http://DESKTOP-R7B102G:35161/']
+[rosmaster.master][INFO] 2024-10-29 15:27:05,363: publisherUpdate[/rosout] -> http://DESKTOP-R7B102G:39707/ ['http://DESKTOP-R7B102G:35161/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2024-10-29 15:27:05,364: -CACHEDPARAM [/rosout_disable_topics_generation] by /gazebo
+[rosmaster.master][INFO] 2024-10-29 15:27:07,068: -PUB [/rosout_agg] /rosout http://DESKTOP-R7B102G:39707/
+[rosmaster.master][INFO] 2024-10-29 15:27:07,112: -SUB [/clock] /rosout http://DESKTOP-R7B102G:39707/
+[rosmaster.master][INFO] 2024-10-29 15:27:07,113: -SUB [/rosout] /rosout http://DESKTOP-R7B102G:39707/
+[rosmaster.master][INFO] 2024-10-29 15:27:07,113: -SERVICE [/rosout/get_loggers] /rosout rosrpc://DESKTOP-R7B102G:60519
+[rosmaster.master][INFO] 2024-10-29 15:27:07,114: -SERVICE [/rosout/set_logger_level] /rosout rosrpc://DESKTOP-R7B102G:60519
+[rosmaster.master][INFO] 2024-10-29 15:27:07,143: -CACHEDPARAM [/rosout/omit_topics] by /rosout
+[rosmaster.main][INFO] 2024-10-29 15:27:07,958: keyboard interrupt, will exit
+[rosmaster.main][INFO] 2024-10-29 15:27:07,960: stopping master...
+[rospy.core][INFO] 2024-10-29 15:27:08,015: signal_shutdown [atexit]

@@ -1,0 +1,15 @@
+Gazebo multi-robot simulator, version 11.14.0
+Copyright (C) 2012 Open Source Robotics Foundation.
+Released under the Apache 2 License.
+http://gazebosim.org
+
+
+(1730570131 963003686) [Msg] Waiting for master.
+(1730570131 964849986) Failed to create connection to remote host[localhost:11345]
+(1730570132 967031383) [Msg] Connected to gazebo master @ http://127.0.0.1:11345
+(1730570132 967095483) [Msg] Publicized address: 172.17.172.218
+(1730570132 968716683) Loaded .ini file from: "/home/aarifah/.gazebo/gui.ini"
+(1730570136 390446035) No spacenav daemon found. Spacenav functionality is disabled
+(1730570536 556501347) Invalid filename or directory["/home/aarifah/.gazebo/models/field"] in GAZEBO_MODEL_PATH. It's not a good idea to put extra files in a GAZEBO_MODEL_PATH because the file structure may be modified by Gazebo.
+(1730570566 744954215) [Err] [InsertModelWidget.cc:403] Missing model.config for model "/home/aarifah/.gazebo/models/field"
+(1730570566 745398115) model.config file is missing in directory["/home/aarifah/.gazebo/models/field"]

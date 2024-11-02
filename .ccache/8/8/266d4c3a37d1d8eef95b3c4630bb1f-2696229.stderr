@@ -1,0 +1,65 @@
+In file included from /usr/include/string.h:495,
+                 from ../../libraries/AP_Param/AP_Param.h:23,
+                 from ../../libraries/AP_Math/AP_Math.h:9,
+                 from ../../libraries/AP_AHRS/AP_AHRS.h:23,
+                 from ../../libraries/AP_Logger/LogFile.cpp:3:
+In function ‘char* strncpy(char*, const char*, size_t)’,
+    inlined from ‘void AP_Logger_Backend::Fill_Format(const LogStructure*, log_Format&)’ at ../../libraries/AP_Logger/LogFile.cpp:35:12:
+/usr/include/x86_64-linux-gnu/bits/string_fortified.h:106:34: warning: ‘char* __builtin_strncpy(char*, const char*, long unsigned int)’ specified bound 4 equals destination size [-Wstringop-truncation]
+  106 |   return __builtin___strncpy_chk (__dest, __src, __len, __bos (__dest));
+      |          ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In function ‘char* strncpy(char*, const char*, size_t)’,
+    inlined from ‘void AP_Logger_Backend::Fill_Format(const LogStructure*, log_Format&)’ at ../../libraries/AP_Logger/LogFile.cpp:36:12:
+/usr/include/x86_64-linux-gnu/bits/string_fortified.h:106:34: warning: ‘char* __builtin_strncpy(char*, const char*, long unsigned int)’ specified bound 16 equals destination size [-Wstringop-truncation]
+  106 |   return __builtin___strncpy_chk (__dest, __src, __len, __bos (__dest));
+      |          ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In function ‘char* strncpy(char*, const char*, size_t)’,
+    inlined from ‘void AP_Logger_Backend::Fill_Format_Units(const LogStructure*, log_Format_Units&)’ at ../../libraries/AP_Logger/LogFile.cpp:51:12:
+/usr/include/x86_64-linux-gnu/bits/string_fortified.h:106:34: warning: ‘char* __builtin_strncpy(char*, const char*, long unsigned int)’ specified bound 16 equals destination size [-Wstringop-truncation]
+  106 |   return __builtin___strncpy_chk (__dest, __src, __len, __bos (__dest));
+      |          ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In function ‘char* strncpy(char*, const char*, size_t)’,
+    inlined from ‘void AP_Logger_Backend::Fill_Format(const LogStructure*, log_Format&)’ at ../../libraries/AP_Logger/LogFile.cpp:35:12,
+    inlined from ‘bool AP_Logger_Backend::Write_Format(const LogStructure*)’ at ../../libraries/AP_Logger/LogFile.cpp:61:16:
+/usr/include/x86_64-linux-gnu/bits/string_fortified.h:106:34: warning: ‘char* __builtin_strncpy(char*, const char*, long unsigned int)’ specified bound 4 equals destination size [-Wstringop-truncation]
+  106 |   return __builtin___strncpy_chk (__dest, __src, __len, __bos (__dest));
+      |          ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In function ‘char* strncpy(char*, const char*, size_t)’,
+    inlined from ‘void AP_Logger_Backend::Fill_Format(const LogStructure*, log_Format&)’ at ../../libraries/AP_Logger/LogFile.cpp:36:12,
+    inlined from ‘bool AP_Logger_Backend::Write_Format(const LogStructure*)’ at ../../libraries/AP_Logger/LogFile.cpp:61:16:
+/usr/include/x86_64-linux-gnu/bits/string_fortified.h:106:34: warning: ‘char* __builtin_strncpy(char*, const char*, long unsigned int)’ specified bound 16 equals destination size [-Wstringop-truncation]
+  106 |   return __builtin___strncpy_chk (__dest, __src, __len, __bos (__dest));
+      |          ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In function ‘char* strncpy(char*, const char*, size_t)’,
+    inlined from ‘void AP_Logger_Backend::Fill_Format(const LogStructure*, log_Format&)’ at ../../libraries/AP_Logger/LogFile.cpp:37:12,
+    inlined from ‘bool AP_Logger_Backend::Write_Format(const LogStructure*)’ at ../../libraries/AP_Logger/LogFile.cpp:61:16:
+/usr/include/x86_64-linux-gnu/bits/string_fortified.h:106:34: warning: ‘char* __builtin_strncpy(char*, const char*, long unsigned int)’ specified bound 64 equals destination size [-Wstringop-truncation]
+  106 |   return __builtin___strncpy_chk (__dest, __src, __len, __bos (__dest));
+      |          ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In function ‘char* strncpy(char*, const char*, size_t)’,
+    inlined from ‘bool AP_Logger_Backend::Write_Unit(const UnitStructure*)’ at ../../libraries/AP_Logger/LogFile.cpp:76:12:
+/usr/include/x86_64-linux-gnu/bits/string_fortified.h:106:34: warning: ‘char* __builtin_strncpy(char*, const char*, long unsigned int)’ specified bound 64 equals destination size [-Wstringop-truncation]
+  106 |   return __builtin___strncpy_chk (__dest, __src, __len, __bos (__dest));
+      |          ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In function ‘char* strncpy(char*, const char*, size_t)’,
+    inlined from ‘void AP_Logger_Backend::Fill_Format_Units(const LogStructure*, log_Format_Units&)’ at ../../libraries/AP_Logger/LogFile.cpp:51:12,
+    inlined from ‘bool AP_Logger_Backend::Write_Format_Units(const LogStructure*)’ at ../../libraries/AP_Logger/LogFile.cpp:102:22:
+/usr/include/x86_64-linux-gnu/bits/string_fortified.h:106:34: warning: ‘char* __builtin_strncpy(char*, const char*, long unsigned int)’ specified bound 16 equals destination size [-Wstringop-truncation]
+  106 |   return __builtin___strncpy_chk (__dest, __src, __len, __bos (__dest));
+      |          ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In function ‘char* strncpy(char*, const char*, size_t)’,
+    inlined from ‘void AP_Logger_Backend::Fill_Format_Units(const LogStructure*, log_Format_Units&)’ at ../../libraries/AP_Logger/LogFile.cpp:52:12,
+    inlined from ‘bool AP_Logger_Backend::Write_Format_Units(const LogStructure*)’ at ../../libraries/AP_Logger/LogFile.cpp:102:22:
+/usr/include/x86_64-linux-gnu/bits/string_fortified.h:106:34: warning: ‘char* __builtin_strncpy(char*, const char*, long unsigned int)’ specified bound 16 equals destination size [-Wstringop-truncation]
+  106 |   return __builtin___strncpy_chk (__dest, __src, __len, __bos (__dest));
+      |          ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In function ‘char* strncpy(char*, const char*, size_t)’,
+    inlined from ‘bool AP_Logger_Backend::Write_Parameter(const char*, float)’ at ../../libraries/AP_Logger/LogFile.cpp:117:12:
+/usr/include/x86_64-linux-gnu/bits/string_fortified.h:106:34: warning: ‘char* __builtin_strncpy(char*, const char*, long unsigned int)’ specified bound 16 equals destination size [-Wstringop-truncation]
+  106 |   return __builtin___strncpy_chk (__dest, __src, __len, __bos (__dest));
+      |          ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In function ‘char* strncpy(char*, const char*, size_t)’,
+    inlined from ‘bool AP_Logger_Backend::Write_Message(const char*)’ at ../../libraries/AP_Logger/LogFile.cpp:466:12:
+/usr/include/x86_64-linux-gnu/bits/string_fortified.h:106:34: warning: ‘char* __builtin_strncpy(char*, const char*, long unsigned int)’ specified bound 64 equals destination size [-Wstringop-truncation]
+  106 |   return __builtin___strncpy_chk (__dest, __src, __len, __bos (__dest));
+      |          ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

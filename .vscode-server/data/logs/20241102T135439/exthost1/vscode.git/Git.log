@@ -1,0 +1,341 @@
+2024-11-02 13:54:47.181 [info] [main] Log level: Info
+2024-11-02 13:54:47.181 [info] [main] Validating found git in: "git"
+2024-11-02 13:54:47.181 [info] [main] Using git "2.25.1" from "git"
+2024-11-02 13:54:47.181 [info] [Model][doInitialScan] Initial repository scan started
+2024-11-02 13:54:47.955 [info] > git rev-parse --show-toplevel [778ms]
+2024-11-02 13:54:47.955 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-02 13:54:47.969 [info] > git rev-parse --show-toplevel [1ms]
+2024-11-02 13:54:47.969 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-02 13:54:47.976 [info] > git rev-parse --show-toplevel [3ms]
+2024-11-02 13:54:47.976 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-02 13:54:47.983 [info] > git rev-parse --show-toplevel [3ms]
+2024-11-02 13:54:47.983 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-02 13:54:47.990 [info] > git rev-parse --show-toplevel [3ms]
+2024-11-02 13:54:47.990 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-02 13:54:47.998 [info] > git rev-parse --show-toplevel [2ms]
+2024-11-02 13:54:47.998 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-02 13:54:48.008 [info] > git rev-parse --show-toplevel [5ms]
+2024-11-02 13:54:48.008 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-02 13:54:48.014 [info] > git rev-parse --show-toplevel [2ms]
+2024-11-02 13:54:48.014 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-02 13:54:48.023 [info] > git rev-parse --show-toplevel [3ms]
+2024-11-02 13:54:48.023 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-02 13:54:48.028 [info] > git rev-parse --show-toplevel [2ms]
+2024-11-02 13:54:48.028 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-02 13:54:48.034 [info] > git rev-parse --show-toplevel [2ms]
+2024-11-02 13:54:48.034 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-02 13:54:48.041 [info] > git rev-parse --show-toplevel [2ms]
+2024-11-02 13:54:48.041 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-02 13:54:48.053 [info] > git rev-parse --show-toplevel [6ms]
+2024-11-02 13:54:48.054 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-02 13:54:48.075 [info] > git rev-parse --show-toplevel [16ms]
+2024-11-02 13:54:48.075 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-02 13:54:48.086 [info] > git rev-parse --show-toplevel [6ms]
+2024-11-02 13:54:48.094 [info] > git rev-parse --git-dir --git-common-dir [2ms]
+2024-11-02 13:54:48.132 [info] [Model][openRepository] Opened repository: /home/aarifah/ardupilot
+2024-11-02 13:54:48.168 [info] > git config --get commit.template [19ms]
+2024-11-02 13:54:48.172 [info] > git rev-parse --show-toplevel [18ms]
+2024-11-02 13:54:48.186 [info] > git rev-parse --git-dir --git-common-dir [2ms]
+2024-11-02 13:54:48.196 [info] [Model][openRepository] Opened repository: /home/aarifah/ardupilot_gazebo
+2024-11-02 13:54:48.345 [info] > git rev-parse --show-toplevel [39ms]
+2024-11-02 13:54:48.345 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-02 13:54:48.348 [info] > git config --get commit.template [48ms]
+2024-11-02 13:54:48.436 [info] > git rev-parse --show-toplevel [36ms]
+2024-11-02 13:54:48.436 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-02 13:54:48.446 [info] > git rev-parse --show-toplevel [4ms]
+2024-11-02 13:54:48.447 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-02 13:54:48.463 [info] [Model][doInitialScan] Initial repository scan completed - repositories (2), closed repositories (0), parent repositories (0), unsafe repositories (0)
+2024-11-02 13:54:48.504 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [70ms]
+2024-11-02 13:54:48.511 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/aarifah/ardupilot_gazebo/.git/refs/remotes/origin/master'
+2024-11-02 13:54:48.520 [info] > git rev-parse refs/remotes/origin/master [9ms]
+2024-11-02 13:54:48.546 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [9ms]
+2024-11-02 13:54:48.894 [info] > git check-ignore -v -z --stdin [66ms]
+2024-11-02 13:54:49.318 [info] > git for-each-ref --format %(refname) %(objectname) %(*objectname) refs/tags [1149ms]
+2024-11-02 13:54:49.472 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [101ms]
+2024-11-02 13:54:49.501 [info] > git status -z -uall [972ms]
+2024-11-02 13:54:49.572 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [37ms]
+2024-11-02 13:54:49.591 [info] > git config --get commit.template [20ms]
+2024-11-02 13:54:49.603 [info] > git config --local branch.master.vscode-merge-base [15ms]
+2024-11-02 13:54:49.628 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/origin/master refs/remotes/origin/master [4ms]
+2024-11-02 13:54:49.702 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [102ms]
+2024-11-02 13:54:49.717 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/aarifah/ardupilot_gazebo/.git/refs/remotes/origin/master'
+2024-11-02 13:54:49.719 [info] > git merge-base refs/heads/master refs/remotes/origin/master [83ms]
+2024-11-02 13:54:49.734 [info] > git rev-parse refs/remotes/origin/master [17ms]
+2024-11-02 13:54:49.757 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [2ms]
+2024-11-02 13:54:49.759 [info] > git diff --name-status -z --diff-filter=ADMR a28cab40f939a42d4845390ed5ace6d36618385c...refs/remotes/origin/master [27ms]
+2024-11-02 13:54:50.027 [info] > git status -z -uall [289ms]
+2024-11-02 13:54:50.429 [info] > git check-ignore -v -z --stdin [8ms]
+2024-11-02 13:54:58.012 [info] > git check-ignore -v -z --stdin [9ms]
+2024-11-02 13:54:59.646 [info] > git status -z -uall [10310ms]
+2024-11-02 13:54:59.672 [info] > git config --get commit.template [3ms]
+2024-11-02 13:54:59.696 [info] > git for-each-ref --format %(refname) %(objectname) %(*objectname) refs/tags [17ms]
+2024-11-02 13:54:59.724 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [15ms]
+2024-11-02 13:55:00.158 [info] > git rev-parse --show-toplevel [2ms]
+2024-11-02 13:55:00.162 [info] > git rev-parse --git-dir --git-common-dir [1ms]
+2024-11-02 13:55:00.167 [info] [Model][openRepository] Opened repository: /home/aarifah/ardupilot/modules/uavcan
+2024-11-02 13:55:00.181 [info] > git config --get commit.template [8ms]
+2024-11-02 13:55:00.185 [info] > git rev-parse --show-toplevel [8ms]
+2024-11-02 13:55:00.198 [info] > git rev-parse --git-dir --git-common-dir [5ms]
+2024-11-02 13:55:00.206 [info] [Model][openRepository] Opened repository: /home/aarifah/ardupilot/modules/waf
+2024-11-02 13:55:00.229 [info] > git config --get commit.template [11ms]
+2024-11-02 13:55:00.230 [info] > git rev-parse --show-toplevel [2ms]
+2024-11-02 13:55:00.242 [info] > git rev-parse --git-dir --git-common-dir [8ms]
+2024-11-02 13:55:00.247 [info] [Model][openRepository] Opened repository: /home/aarifah/ardupilot/modules/gbenchmark
+2024-11-02 13:55:00.282 [info] > git config --get commit.template [17ms]
+2024-11-02 13:55:00.282 [info] > git rev-parse --show-toplevel [21ms]
+2024-11-02 13:55:00.301 [info] > git rev-parse --git-dir --git-common-dir [15ms]
+2024-11-02 13:55:00.309 [info] [Model][openRepository] Opened repository: /home/aarifah/ardupilot/modules/mavlink
+2024-11-02 13:55:00.322 [info] > git config --get commit.template [6ms]
+2024-11-02 13:55:00.326 [info] > git rev-parse --show-toplevel [5ms]
+2024-11-02 13:55:00.350 [info] > git rev-parse --git-dir --git-common-dir [11ms]
+2024-11-02 13:55:00.358 [info] [Model][openRepository] Opened repository: /home/aarifah/ardupilot/modules/gtest
+2024-11-02 13:55:00.375 [info] > git config --get commit.template [7ms]
+2024-11-02 13:55:00.376 [info] > git rev-parse --show-toplevel [5ms]
+2024-11-02 13:55:00.401 [info] > git rev-parse --git-dir --git-common-dir [14ms]
+2024-11-02 13:55:00.419 [info] [Model][openRepository] Opened repository: /home/aarifah/ardupilot/modules/ChibiOS
+2024-11-02 13:55:00.435 [info] > git config --get commit.template [5ms]
+2024-11-02 13:55:00.442 [info] > git rev-parse --show-toplevel [8ms]
+2024-11-02 13:55:00.456 [info] > git rev-parse --git-dir --git-common-dir [8ms]
+2024-11-02 13:55:00.465 [info] [Model][openRepository] Opened repository: /home/aarifah/ardupilot/modules/libcanard
+2024-11-02 13:55:00.479 [info] > git config --get commit.template [8ms]
+2024-11-02 13:55:00.595 [info] > git for-each-ref --format %(refname) %(objectname) %(*objectname) refs/tags [405ms]
+2024-11-02 13:55:00.612 [info] > git for-each-ref --format %(refname) %(objectname) %(*objectname) refs/tags [134ms]
+2024-11-02 13:55:00.655 [info] > git for-each-ref --format %(refname) %(objectname) %(*objectname) refs/tags [215ms]
+2024-11-02 13:55:00.703 [info] > git status -z -uall [105ms]
+2024-11-02 13:55:00.703 [info] > git status -z -uall [88ms]
+2024-11-02 13:55:00.741 [info] > git check-ignore -v -z --stdin [19ms]
+2024-11-02 13:55:00.742 [info] > git check-ignore -v -z --stdin [17ms]
+2024-11-02 13:55:00.743 [info] > git for-each-ref --format %(refname) %(objectname) %(*objectname) refs/tags [411ms]
+2024-11-02 13:55:00.754 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [151ms]
+2024-11-02 13:55:00.785 [info] > git status -z -uall [36ms]
+2024-11-02 13:55:00.785 [info] > git config --get commit.template [6ms]
+2024-11-02 13:55:00.795 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [176ms]
+2024-11-02 13:55:00.812 [info] > git for-each-ref --format %(refname) %(objectname) %(*objectname) refs/tags [18ms]
+2024-11-02 13:55:00.824 [info] > git config --get commit.template [12ms]
+2024-11-02 13:55:00.825 [info] > git for-each-ref --format %(refname) %(objectname) %(*objectname) refs/tags [526ms]
+2024-11-02 13:55:00.851 [info] > git status -z -uall [19ms]
+2024-11-02 13:55:00.852 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [30ms]
+2024-11-02 13:55:00.866 [info] > git for-each-ref --format %(refname) %(objectname) %(*objectname) refs/tags [8ms]
+2024-11-02 13:55:00.891 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [6ms]
+2024-11-02 13:55:00.915 [info] > git for-each-ref --format %(refname) %(objectname) %(*objectname) refs/tags [535ms]
+2024-11-02 13:55:00.944 [info] > git status -z -uall [126ms]
+2024-11-02 13:55:00.959 [info] > git status -z -uall [35ms]
+2024-11-02 13:55:00.979 [info] > git status -z -uall [106ms]
+2024-11-02 13:55:01.003 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [250ms]
+2024-11-02 13:55:01.012 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [171ms]
+2024-11-02 13:55:01.031 [info] > git config --get commit.template [7ms]
+2024-11-02 13:55:01.033 [info] > git config --get commit.template [4ms]
+2024-11-02 13:55:01.046 [info] > git for-each-ref --format %(refname) %(objectname) %(*objectname) refs/tags [1ms]
+2024-11-02 13:55:01.056 [info] > git for-each-ref --format %(refname) %(objectname) %(*objectname) refs/tags [19ms]
+2024-11-02 13:55:01.072 [info] > git status -z -uall [23ms]
+2024-11-02 13:55:01.072 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [17ms]
+2024-11-02 13:55:01.080 [info] > git for-each-ref --format %(refname) %(objectname) %(*objectname) refs/tags [839ms]
+2024-11-02 13:55:01.106 [info] > git status -z -uall [45ms]
+2024-11-02 13:55:01.109 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [38ms]
+2024-11-02 13:55:01.113 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [170ms]
+2024-11-02 13:55:01.137 [info] > git status -z -uall [44ms]
+2024-11-02 13:55:01.138 [info] > git config --get commit.template [5ms]
+2024-11-02 13:55:01.141 [info] > git for-each-ref --format %(refname) %(objectname) %(*objectname) refs/tags [4ms]
+2024-11-02 13:55:01.168 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [2ms]
+2024-11-02 13:55:01.178 [info] > git status -z -uall [32ms]
+2024-11-02 13:55:01.207 [info] > git status -z -uall [1508ms]
+2024-11-02 13:55:01.234 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [130ms]
+2024-11-02 13:55:01.255 [info] > git config --get commit.template [7ms]
+2024-11-02 13:55:01.262 [info] > git for-each-ref --format %(refname) %(objectname) %(*objectname) refs/tags [7ms]
+2024-11-02 13:55:01.279 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [7ms]
+2024-11-02 13:55:01.294 [info] > git status -z -uall [27ms]
+2024-11-02 13:55:01.322 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [633ms]
+2024-11-02 13:55:01.767 [info] > git rev-parse --show-toplevel [2ms]
+2024-11-02 13:55:01.774 [info] > git rev-parse --git-dir --git-common-dir [2ms]
+2024-11-02 13:55:01.781 [info] [Model][openRepository] Opened repository: /home/aarifah/ardupilot/modules/uavcan/dsdl
+2024-11-02 13:55:01.806 [info] > git config --get commit.template [12ms]
+2024-11-02 13:55:01.814 [info] > git rev-parse --show-toplevel [12ms]
+2024-11-02 13:55:01.839 [info] > git rev-parse --git-dir --git-common-dir [19ms]
+2024-11-02 13:55:01.846 [info] [Model][openRepository] Opened repository: /home/aarifah/ardupilot/modules/uavcan/libuavcan/dsdl_compiler/pyuavcan
+2024-11-02 13:55:01.848 [info] > git for-each-ref --format %(refname) %(objectname) %(*objectname) refs/tags [37ms]
+2024-11-02 13:55:01.883 [info] > git status -z -uall [29ms]
+2024-11-02 13:55:01.883 [info] > git rev-parse --show-toplevel [4ms]
+2024-11-02 13:55:01.884 [info] > git config --get commit.template [17ms]
+2024-11-02 13:55:01.924 [info] > git rev-parse --git-dir --git-common-dir [34ms]
+2024-11-02 13:55:01.933 [info] [Model][openRepository] Opened repository: /home/aarifah/ardupilot/modules/libcanard/drivers/avr/avr-can-lib
+2024-11-02 13:55:01.953 [info] > git for-each-ref --format %(refname) %(objectname) %(*objectname) refs/tags [51ms]
+2024-11-02 13:55:01.970 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [112ms]
+2024-11-02 13:55:01.997 [info] > git status -z -uall [35ms]
+2024-11-02 13:55:01.997 [info] > git rev-parse --show-toplevel [46ms]
+2024-11-02 13:55:01.997 [info] > git config --get commit.template [51ms]
+2024-11-02 13:55:02.007 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [32ms]
+2024-11-02 13:55:02.042 [info] > git config --get commit.template [46ms]
+2024-11-02 13:55:02.054 [info] > git rev-parse --git-dir --git-common-dir [32ms]
+2024-11-02 13:55:02.062 [info] [Model][openRepository] Opened repository: /home/aarifah/ardupilot/modules/libcanard/dsdl_compiler/pyuavcan
+2024-11-02 13:55:02.102 [info] > git for-each-ref --format %(refname) %(objectname) %(*objectname) refs/tags [49ms]
+2024-11-02 13:55:02.120 [info] > git config --get commit.template [74ms]
+2024-11-02 13:55:02.120 [info] > git for-each-ref --format %(refname) %(objectname) %(*objectname) refs/tags [80ms]
+2024-11-02 13:55:02.157 [info] > git status -z -uall [44ms]
+2024-11-02 13:55:02.157 [info] > git status -z -uall [22ms]
+2024-11-02 13:55:02.158 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [38ms]
+2024-11-02 13:55:02.162 [info] > git rev-parse --show-toplevel [79ms]
+2024-11-02 13:55:02.162 [info] > git config --get commit.template [83ms]
+2024-11-02 13:55:02.176 [info] > git for-each-ref --format %(refname) %(objectname) %(*objectname) refs/tags [24ms]
+2024-11-02 13:55:02.199 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [57ms]
+2024-11-02 13:55:02.226 [info] > git status -z -uall [46ms]
+2024-11-02 13:55:02.227 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [29ms]
+2024-11-02 13:55:02.229 [info] > git rev-parse --git-dir --git-common-dir [56ms]
+2024-11-02 13:55:02.242 [info] [Model][openRepository] Opened repository: /home/aarifah/ardupilot/modules/mavlink/pymavlink
+2024-11-02 13:55:02.252 [info] > git config --get commit.template [37ms]
+2024-11-02 13:55:02.252 [info] > git for-each-ref --format %(refname) %(objectname) %(*objectname) refs/tags [44ms]
+2024-11-02 13:55:02.296 [info] > git status -z -uall [34ms]
+2024-11-02 13:55:02.297 [info] > git config --get commit.template [48ms]
+2024-11-02 13:55:02.320 [info] > git for-each-ref --format %(refname) %(objectname) %(*objectname) refs/tags [18ms]
+2024-11-02 13:55:02.365 [info] > git status -z -uall [38ms]
+2024-11-02 13:55:02.365 [info] > git check-ignore -v -z --stdin [17ms]
+2024-11-02 13:55:02.368 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [25ms]
+2024-11-02 13:55:02.379 [info] > git for-each-ref --format %(refname) %(objectname) %(*objectname) refs/tags [62ms]
+2024-11-02 13:55:02.394 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [127ms]
+2024-11-02 13:55:02.415 [info] > git check-ignore -v -z --stdin [57ms]
+2024-11-02 13:55:02.437 [info] > git status -z -uall [52ms]
+2024-11-02 13:55:02.439 [info] > git config --get commit.template [24ms]
+2024-11-02 13:55:02.440 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [46ms]
+2024-11-02 13:55:02.452 [info] > git for-each-ref --format %(refname) %(objectname) %(*objectname) refs/tags [17ms]
+2024-11-02 13:55:02.488 [info] > git status -z -uall [31ms]
+2024-11-02 13:55:02.488 [info] > git config --get commit.template [7ms]
+2024-11-02 13:55:02.489 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [22ms]
+2024-11-02 13:55:02.515 [info] > git for-each-ref --format %(refname) %(objectname) %(*objectname) refs/tags [4ms]
+2024-11-02 13:55:02.535 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [4ms]
+2024-11-02 13:55:02.551 [info] > git status -z -uall [29ms]
+2024-11-02 13:55:02.591 [info] > git status -z -uall [1932ms]
+2024-11-02 13:55:02.615 [info] > git config --get commit.template [9ms]
+2024-11-02 13:55:02.619 [info] > git for-each-ref --format %(refname) %(objectname) %(*objectname) refs/tags [5ms]
+2024-11-02 13:55:02.643 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [11ms]
+2024-11-02 13:55:03.029 [info] > git rev-parse --show-toplevel [11ms]
+2024-11-02 13:55:03.042 [info] > git rev-parse --git-dir --git-common-dir [7ms]
+2024-11-02 13:55:03.050 [info] [Model][openRepository] Opened repository: /home/aarifah/ardupilot/modules/uavcan/libuavcan/dsdl_compiler/pyuavcan/dsdl
+2024-11-02 13:55:03.112 [info] > git rev-parse --show-toplevel [35ms]
+2024-11-02 13:55:03.113 [info] > git config --get commit.template [52ms]
+2024-11-02 13:55:03.135 [info] > git for-each-ref --format %(refname) %(objectname) %(*objectname) refs/tags [9ms]
+2024-11-02 13:55:03.163 [info] > git rev-parse --git-dir --git-common-dir [45ms]
+2024-11-02 13:55:03.170 [info] [Model][openRepository] Opened repository: /home/aarifah/ardupilot/modules/libcanard/dsdl_compiler/pyuavcan/uavcan/dsdl_files
+2024-11-02 13:55:03.189 [info] > git status -z -uall [47ms]
+2024-11-02 13:55:03.219 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [48ms]
+2024-11-02 13:55:03.269 [info] > git for-each-ref --format %(refname) %(objectname) %(*objectname) refs/tags [62ms]
+2024-11-02 13:55:03.269 [info] > git config --get commit.template [80ms]
+2024-11-02 13:55:03.315 [info] > git status -z -uall [38ms]
+2024-11-02 13:55:03.316 [info] > git config --get commit.template [58ms]
+2024-11-02 13:55:03.334 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [46ms]
+2024-11-02 13:55:03.346 [info] > git for-each-ref --format %(refname) %(objectname) %(*objectname) refs/tags [13ms]
+2024-11-02 13:55:03.374 [info] > git status -z -uall [19ms]
+2024-11-02 13:55:03.385 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [25ms]
+2024-11-02 13:55:03.407 [info] > git for-each-ref --format %(refname) %(objectname) %(*objectname) refs/tags [12ms]
+2024-11-02 13:55:03.407 [info] > git config --get commit.template [34ms]
+2024-11-02 13:55:03.428 [info] > git status -z -uall [17ms]
+2024-11-02 13:55:03.428 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [3ms]
+2024-11-02 13:55:03.650 [info] > git check-ignore -v -z --stdin [12ms]
+2024-11-02 13:55:03.654 [info] > git check-ignore -v -z --stdin [8ms]
+2024-11-02 13:55:04.801 [info] > git status -z -uall [2173ms]
+2024-11-02 13:55:17.844 [info] > git check-ignore -v -z --stdin [13ms]
+2024-11-02 13:55:19.730 [info] > git check-ignore -v -z --stdin [10ms]
+2024-11-02 13:57:43.704 [info] > git rev-parse --show-toplevel [29ms]
+2024-11-02 13:57:43.704 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-02 13:58:55.344 [info] > git check-ignore -v -z --stdin [8ms]
+2024-11-02 13:59:00.108 [info] > git show --textconv :models/iris_with_ardupilot/model.config [32ms]
+2024-11-02 13:59:00.109 [info] > git ls-files --stage -- /home/aarifah/ardupilot_gazebo/models/iris_with_ardupilot/model.config [15ms]
+2024-11-02 13:59:00.137 [info] > git cat-file -s 0a4e0fd265c58aeb011225bf591f1ca132f8e541 [12ms]
+2024-11-02 13:59:11.449 [info] > git show --textconv :models/iris_with_ardupilot/model.sdf [22ms]
+2024-11-02 13:59:11.464 [info] > git ls-files --stage -- /home/aarifah/ardupilot_gazebo/models/iris_with_ardupilot/model.sdf [17ms]
+2024-11-02 13:59:11.499 [info] > git cat-file -s fb0a6afa25329876e93c757672eb36eddd562eed [15ms]
+2024-11-02 13:59:39.551 [info] > git show --textconv :models/iris_with_ardupilot/model.config [7ms]
+2024-11-02 13:59:39.569 [info] > git ls-files --stage -- /home/aarifah/ardupilot_gazebo/models/iris_with_ardupilot/model.config [19ms]
+2024-11-02 13:59:39.584 [info] > git cat-file -s 0a4e0fd265c58aeb011225bf591f1ca132f8e541 [1ms]
+2024-11-02 14:00:03.749 [info] > git check-ignore -v -z --stdin [5ms]
+2024-11-02 14:02:06.837 [info] > git rev-parse --show-toplevel [9ms]
+2024-11-02 14:02:06.839 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-02 14:02:16.949 [info] > git rev-parse --show-toplevel [6ms]
+2024-11-02 14:02:16.949 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-02 14:02:29.555 [info] > git show --textconv :models/iris_with_ardupilot/model.config [37ms]
+2024-11-02 14:02:29.556 [info] > git ls-files --stage -- /home/aarifah/ardupilot_gazebo/models/iris_with_ardupilot/model.config [10ms]
+2024-11-02 14:02:29.572 [info] > git cat-file -s 0a4e0fd265c58aeb011225bf591f1ca132f8e541 [9ms]
+2024-11-02 14:02:56.185 [info] > git rev-parse --show-toplevel [30ms]
+2024-11-02 14:02:56.185 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-02 14:03:17.726 [info] > git rev-parse --show-toplevel [1ms]
+2024-11-02 14:03:17.726 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-02 14:03:56.314 [info] > git rev-parse --show-toplevel [3ms]
+2024-11-02 14:03:56.315 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-02 14:04:22.185 [info] > git rev-parse --show-toplevel [2ms]
+2024-11-02 14:04:22.185 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-02 14:04:46.192 [info] > git rev-parse --show-toplevel [16ms]
+2024-11-02 14:04:46.192 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-02 14:04:49.362 [info] > git rev-parse --show-toplevel [4ms]
+2024-11-02 14:04:49.362 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-02 14:04:49.385 [info] > git rev-parse --show-toplevel [11ms]
+2024-11-02 14:04:49.385 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-02 14:04:50.550 [info] > git rev-parse --show-toplevel [6ms]
+2024-11-02 14:04:50.550 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-02 14:04:50.583 [info] > git rev-parse --show-toplevel [16ms]
+2024-11-02 14:04:50.583 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-02 14:04:50.595 [info] > git rev-parse --show-toplevel [4ms]
+2024-11-02 14:04:50.595 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-02 14:05:28.104 [info] > git rev-parse --show-toplevel [11ms]
+2024-11-02 14:05:28.104 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-02 14:05:28.262 [info] > git rev-parse --show-toplevel [3ms]
+2024-11-02 14:05:28.262 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-02 14:05:28.274 [info] > git rev-parse --show-toplevel [4ms]
+2024-11-02 14:05:28.275 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-02 14:05:50.402 [info] > git rev-parse --show-toplevel [4ms]
+2024-11-02 14:05:50.402 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-02 14:05:50.489 [info] > git rev-parse --show-toplevel [2ms]
+2024-11-02 14:05:50.489 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-02 14:05:50.508 [info] > git rev-parse --show-toplevel [3ms]
+2024-11-02 14:05:50.508 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-02 14:05:57.325 [info] > git rev-parse --show-toplevel [10ms]
+2024-11-02 14:05:57.326 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-02 14:05:57.373 [info] > git rev-parse --show-toplevel [4ms]
+2024-11-02 14:05:57.373 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-02 14:05:57.386 [info] > git rev-parse --show-toplevel [5ms]
+2024-11-02 14:05:57.386 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-02 14:06:05.014 [info] > git rev-parse --show-toplevel [25ms]
+2024-11-02 14:06:05.014 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-02 14:06:05.126 [info] > git rev-parse --show-toplevel [11ms]
+2024-11-02 14:06:05.126 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-02 14:06:05.140 [info] > git rev-parse --show-toplevel [3ms]
+2024-11-02 14:06:05.140 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-02 14:06:06.576 [info] > git rev-parse --show-toplevel [1ms]
+2024-11-02 14:06:06.576 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-02 14:06:06.671 [info] > git rev-parse --show-toplevel [2ms]
+2024-11-02 14:06:06.671 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-02 14:06:06.684 [info] > git rev-parse --show-toplevel [4ms]
+2024-11-02 14:06:06.685 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-02 14:06:14.574 [info] > git rev-parse --show-toplevel [31ms]
+2024-11-02 14:06:14.574 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-02 14:06:14.610 [info] > git rev-parse --show-toplevel [1ms]
+2024-11-02 14:06:14.611 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-02 14:06:14.671 [info] > git rev-parse --show-toplevel [43ms]
+2024-11-02 14:06:14.671 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-02 14:07:34.535 [info] > git rev-parse --show-toplevel [6ms]
+2024-11-02 14:07:34.535 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-02 14:07:34.558 [info] > git rev-parse --show-toplevel [1ms]
+2024-11-02 14:07:34.559 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-02 14:07:34.575 [info] > git rev-parse --show-toplevel [5ms]
+2024-11-02 14:07:34.575 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-02 14:16:50.022 [info] > git rev-parse --show-toplevel [7ms]
+2024-11-02 14:16:50.022 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-02 14:16:50.136 [info] > git rev-parse --show-toplevel [10ms]
+2024-11-02 14:16:50.136 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-02 14:16:50.192 [info] > git rev-parse --show-toplevel [1ms]
+2024-11-02 14:16:50.193 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-02 14:19:32.778 [info] > git rev-parse --show-toplevel [13ms]
+2024-11-02 14:19:32.778 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-02 14:20:57.237 [info] > git rev-parse --show-toplevel [19ms]
+2024-11-02 14:20:57.263 [info] > git rev-parse --git-dir --git-common-dir [9ms]
+2024-11-02 14:20:57.276 [info] [Model][openRepository] Opened repository: /home/aarifah
+2024-11-02 14:20:57.313 [info] [Git][getRemotes] No remotes found in the git config file
+2024-11-02 14:20:57.314 [info] > git config --get commit.template [28ms]
+2024-11-02 14:20:57.562 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [250ms]
+2024-11-02 14:20:57.563 [warning] [Git][getBranch] No such branch: master
+2024-11-02 14:20:57.581 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [7ms]
+2024-11-02 14:20:57.688 [info] > git show --textconv :.gazebo/models/bookshelf/model.config [24ms]
+2024-11-02 14:20:57.692 [info] > git ls-files --stage -- /home/aarifah/.gazebo/models/bookshelf/model.config [7ms]
+2024-11-02 14:20:57.962 [info] > git check-ignore -v -z --stdin [6ms]
+2024-11-02 14:20:59.123 [info] > git status -z -uall [1555ms] (cancelled)
+2024-11-02 14:21:27.465 [info] > git check-ignore -v -z --stdin [15ms]
+2024-11-02 14:21:31.342 [info] > git check-ignore -v -z --stdin [39ms]
+2024-11-02 14:21:31.343 [info] > git check-ignore -v -z --stdin [27ms]
+2024-11-02 14:21:31.362 [info] > git check-ignore -v -z --stdin [29ms]

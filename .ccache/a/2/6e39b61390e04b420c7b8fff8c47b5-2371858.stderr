@@ -1,0 +1,11 @@
+In file included from /usr/include/string.h:495,
+                 from ../../libraries/AP_HAL/AP_HAL_Namespace.h:3,
+                 from ../../libraries/AP_HAL/AP_HAL.h:5,
+                 from ../../libraries/AP_HAL/utility/Socket.h:20,
+                 from ../../libraries/SITL/SIM_Gimbal.h:21,
+                 from ../../libraries/SITL/SIM_Gimbal.cpp:19:
+In function ‘char* strncpy(char*, const char*, size_t)’,
+    inlined from ‘void SITL::Gimbal::param_send(const SITL::gimbal_param*)’ at ../../libraries/SITL/SIM_Gimbal.cpp:223:12:
+/usr/include/x86_64-linux-gnu/bits/string_fortified.h:106:34: warning: ‘char* __builtin_strncpy(char*, const char*, long unsigned int)’ specified bound 16 equals destination size [-Wstringop-truncation]
+  106 |   return __builtin___strncpy_chk (__dest, __src, __len, __bos (__dest));
+      |          ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

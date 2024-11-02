@@ -1,0 +1,10 @@
+In file included from /usr/include/string.h:495,
+                 from ../../libraries/AP_HAL/AP_HAL_Namespace.h:3,
+                 from ../../libraries/AP_HAL/AP_HAL.h:5,
+                 from ../../libraries/GCS_MAVLink/GCS.h:6,
+                 from ../../libraries/GCS_MAVLink/GCS_Common.cpp:17:
+In function ‘char* strncpy(char*, const char*, size_t)’,
+    inlined from ‘virtual void GCS::send_statustext(MAV_SEVERITY, uint8_t, const char*)’ at ../../libraries/GCS_MAVLink/GCS_Common.cpp:1788:12:
+/usr/include/x86_64-linux-gnu/bits/string_fortified.h:106:34: warning: ‘char* __builtin_strncpy(char*, const char*, long unsigned int)’ specified bound 50 equals destination size [-Wstringop-truncation]
+  106 |   return __builtin___strncpy_chk (__dest, __src, __len, __bos (__dest));
+      |          ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
