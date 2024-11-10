@@ -1,13 +1,17 @@
-# autopilots
+# autopilots :ribbon:
 
 ## Software in the Loop (SITL)
 
 <p>To run SITL either: <br>
-> cd ardupilot/ArduCopter
->
-> sim_vehicles.py -w --map --console 
-or you can specify from the home directory like this<p>
-> sim_vehicles.py -v ArduCopter
+
+##
+<tab><tab> code/cd ardupilot/ArduCopter
+<tab><tab> code/sim_vehicles.py -w --map --console
+
+<p>or you can specify from the home directory like this</p>
+
+##
+<tab><tab> code/sim_vehicles.py -v ArduCopter
 
 <p>Sometimes, you can exit out of all the software incorrectly, so there are still connections to your local ports. This will not allow you to run any other simulations. The error could look like: </p>
 > MAV> link 1 down
