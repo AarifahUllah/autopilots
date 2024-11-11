@@ -11,7 +11,7 @@ sim_vehicles.py -w --map --console
 <p>Or you can specify from the home directory like this</p>
 
 ```
-code/sim_vehicles.py -v ArduCopter
+sim_vehicles.py -v ArduCopter
 ```
 
 <p>Sometimes, you can exit out of all the software incorrectly, so there are still connections to your local ports. This will not allow you to run any other simulations. The error could look like: </p>
@@ -66,6 +66,8 @@ source /opt/ros/noetic/setup.bash
 - SITL on Windows 10 using WSL: https://ardupilot.org/dev/docs/sitl-on-windows-wsl.html#sitl-on-windows-wsl
 - ArduPilot DroneKit Tutorial: https://ardupilot.org/dev/docs/droneapi-tutorial.html
 - DroneKit Repository: https://github.com/dronekit/dronekit-python/blob/master/README.md
+- ArduPilot Introduction: https://ardupilot.org/dev/docs/learning-ardupilot-introduction.html
+- IQ Tutorials: https://github.com/Intelligent-Quads/iq_tutorials/blob/master/docs/ros_intro.md
 - IQ Tutorials Repository: https://github.com/Intelligent-Quads/iq_tutorials/blob/master/docs/ros_intro.md
 - Gazebo Sim Fuel Models: https://app.gazebosim.org/fuel/models
 - SDF Gazebo Documentation: https://gazebosim.org/docs/latest/sdf_worlds/
