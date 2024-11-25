@@ -1,0 +1,25 @@
+[rosmaster.main][INFO] 2024-11-21 17:52:23,194: initialization complete, waiting for shutdown
+[rosmaster.main][INFO] 2024-11-21 17:52:23,194: Starting ROS Master Node
+[xmlrpc][INFO] 2024-11-21 17:52:23,196: XML-RPC server binding to 0.0.0.0:11311
+[xmlrpc][INFO] 2024-11-21 17:52:23,197: Started XML-RPC server [http://DESKTOP-R7B102G:11311/]
+[xmlrpc][INFO] 2024-11-21 17:52:23,197: xml rpc node: starting XML-RPC server
+[rosmaster.master][INFO] 2024-11-21 17:52:23,197: Master initialized: port[11311], uri[http://DESKTOP-R7B102G:11311/]
+[rosmaster.master][INFO] 2024-11-21 17:52:23,297: +PARAM [/run_id] by /roslaunch
+[rosmaster.master][INFO] 2024-11-21 17:52:23,304: +PARAM [/roslaunch/uris/host_desktop_r7b102g__44065] by /roslaunch
+[rosmaster.master][INFO] 2024-11-21 17:52:23,472: +PARAM [/rosversion] by /roslaunch
+[rosmaster.master][INFO] 2024-11-21 17:52:23,472: +PARAM [/rosdistro] by /roslaunch
+[rosmaster.master][INFO] 2024-11-21 17:52:23,473: +PARAM [/use_sim_time] by /roslaunch
+[rosmaster.master][INFO] 2024-11-21 17:52:23,473: +PARAM [/gazebo/enable_ros_network] by /roslaunch
+[rosmaster.master][INFO] 2024-11-21 17:52:23,643: +SERVICE [/rosout/get_loggers] /rosout http://DESKTOP-R7B102G:40111/
+[rosmaster.master][INFO] 2024-11-21 17:52:23,645: +SERVICE [/rosout/set_logger_level] /rosout http://DESKTOP-R7B102G:40111/
+[rosmaster.master][INFO] 2024-11-21 17:52:23,666: +SUB [/clock] /rosout http://DESKTOP-R7B102G:40111/
+[rosmaster.master][INFO] 2024-11-21 17:52:23,668: +PUB [/rosout_agg] /rosout http://DESKTOP-R7B102G:40111/
+[rosmaster.master][INFO] 2024-11-21 17:52:23,675: +SUB [/rosout] /rosout http://DESKTOP-R7B102G:40111/
+[rosmaster.master][INFO] 2024-11-21 17:52:25,148: -PUB [/rosout_agg] /rosout http://DESKTOP-R7B102G:40111/
+[rosmaster.master][INFO] 2024-11-21 17:52:25,149: -SUB [/clock] /rosout http://DESKTOP-R7B102G:40111/
+[rosmaster.master][INFO] 2024-11-21 17:52:25,151: -SUB [/rosout] /rosout http://DESKTOP-R7B102G:40111/
+[rosmaster.master][INFO] 2024-11-21 17:52:25,152: -SERVICE [/rosout/get_loggers] /rosout rosrpc://DESKTOP-R7B102G:60815
+[rosmaster.master][INFO] 2024-11-21 17:52:25,153: -SERVICE [/rosout/set_logger_level] /rosout rosrpc://DESKTOP-R7B102G:60815
+[rosmaster.main][INFO] 2024-11-21 17:52:25,177: keyboard interrupt, will exit
+[rosmaster.main][INFO] 2024-11-21 17:52:25,178: stopping master...
+[rospy.core][INFO] 2024-11-21 17:52:25,178: signal_shutdown [atexit]

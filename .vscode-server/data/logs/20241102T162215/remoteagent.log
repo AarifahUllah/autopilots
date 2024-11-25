@@ -1,0 +1,101 @@
+2024-11-02 16:22:19.235 [info] 
+
+
+
+
+2024-11-02 16:22:19.355 [info] Extension host agent started.
+2024-11-02 16:22:20.666 [info] [127.0.0.1][d117a0a5][ManagementConnection] New connection established.
+2024-11-02 16:22:26.233 [info] [127.0.0.1][5e3f19f7][ExtensionHostConnection] New connection established.
+2024-11-02 16:22:34.846 [error] resolving shell environment failed Unable to resolve your shell environment in a reasonable time. Please review your shell configuration and restart.
+2024-11-02 16:22:34.861 [error] ptyHost was unable to resolve shell environment Unable to resolve your shell environment in a reasonable time. Please review your shell configuration and restart.
+2024-11-02 16:22:34.879 [error] ptyHost was unable to resolve shell environment Unable to resolve your shell environment in a reasonable time. Please review your shell configuration and restart.
+2024-11-02 16:22:34.881 [error] ptyHost was unable to resolve shell environment Unable to resolve your shell environment in a reasonable time. Please review your shell configuration and restart.
+2024-11-02 16:22:34.882 [error] ptyHost was unable to resolve shell environment Unable to resolve your shell environment in a reasonable time. Please review your shell configuration and restart.
+2024-11-02 16:22:34.885 [error] ptyHost was unable to resolve shell environment Unable to resolve your shell environment in a reasonable time. Please review your shell configuration and restart.
+2024-11-02 16:22:34.886 [error] ptyHost was unable to resolve shell environment Unable to resolve your shell environment in a reasonable time. Please review your shell configuration and restart.
+2024-11-02 16:22:34.888 [error] ExtensionHostConnection#buildUserEnvironment resolving shell environment failed Unable to resolve your shell environment in a reasonable time. Please review your shell configuration and restart.
+2024-11-02 16:22:35.040 [info] [127.0.0.1][5e3f19f7][ExtensionHostConnection] <19111> Launched Extension Host Process.
+2024-11-02 16:22:35.406 [error] ptyHost was unable to resolve shell environment Unable to resolve your shell environment in a reasonable time. Please review your shell configuration and restart.
+2024-11-02 16:22:39.822 [error] ptyHost was unable to resolve shell environment Unable to resolve your shell environment in a reasonable time. Please review your shell configuration and restart.
+2024-11-02 16:22:40.634 [error] ptyHost was unable to resolve shell environment Unable to resolve your shell environment in a reasonable time. Please review your shell configuration and restart.
+2024-11-02 16:22:45.312 [error] ptyHost was unable to resolve shell environment Unable to resolve your shell environment in a reasonable time. Please review your shell configuration and restart.
+2024-11-02 16:22:52.777 [error] ExtensionHostConnection#buildUserEnvironment resolving shell environment failed Unable to resolve your shell environment in a reasonable time. Please review your shell configuration and restart.
+2024-11-02 18:24:54.662 [info] [127.0.0.1][d117a0a5][ManagementConnection] The client has reconnected.
+2024-11-02 18:24:54.669 [info] [127.0.0.1][5e3f19f7][ExtensionHostConnection] The client has reconnected.
+2024-11-02 19:06:11.500 [error] Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:218:20)
+2024-11-02 19:06:11.964 [info] [127.0.0.1][d117a0a5][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+2024-11-02 19:06:17.682 [info] [127.0.0.1][d117a0a5][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+2024-11-02 19:06:17.711 [info] [127.0.0.1][5e3f19f7][ExtensionHostConnection] The client has reconnected.
+2024-11-02 19:06:18.161 [info] [127.0.0.1][d117a0a5][ManagementConnection] The client has reconnected.
+2024-11-02 19:51:23.174 [info] [127.0.0.1][d117a0a5][ManagementConnection] The client has reconnected.
+2024-11-02 19:51:23.569 [info] [127.0.0.1][5e3f19f7][ExtensionHostConnection] The client has reconnected.
+2024-11-02 19:53:01.600 [info] [127.0.0.1][d117a0a5][ManagementConnection] The client has reconnected.
+2024-11-02 19:53:02.025 [info] [127.0.0.1][5e3f19f7][ExtensionHostConnection] The client has reconnected.
+2024-11-02 19:54:05.416 [info] [127.0.0.1][d117a0a5][ManagementConnection] The client has reconnected.
+2024-11-02 19:54:05.644 [info] [127.0.0.1][5e3f19f7][ExtensionHostConnection] The client has reconnected.
+2024-11-02 20:04:39.687 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-02 20:04:39.714 [info] [127.0.0.1][d117a0a5][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+2024-11-02 20:04:46.046 [info] [127.0.0.1][d117a0a5][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+2024-11-02 20:04:46.046 [info] [127.0.0.1][5e3f19f7][ExtensionHostConnection] The client has reconnected.
+2024-11-02 20:04:49.069 [info] [127.0.0.1][d117a0a5][ManagementConnection] The client has reconnected.
+2024-11-02 20:31:12.551 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-02 21:06:00.045 [info] [127.0.0.1][d117a0a5][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+2024-11-02 21:06:07.233 [info] [127.0.0.1][d117a0a5][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+2024-11-02 21:06:07.234 [info] [127.0.0.1][5e3f19f7][ExtensionHostConnection] The client has reconnected.
+2024-11-02 21:06:08.345 [info] [127.0.0.1][d117a0a5][ManagementConnection] The client has reconnected.
+2024-11-02 21:48:20.768 [error] Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:218:20)
+2024-11-02 21:48:21.001 [info] [127.0.0.1][d117a0a5][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+2024-11-02 21:48:21.010 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-02 21:48:33.686 [info] [127.0.0.1][d117a0a5][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+2024-11-02 21:48:33.697 [info] [127.0.0.1][d117a0a5][ManagementConnection] The client has reconnected.
+2024-11-02 21:48:33.720 [info] [127.0.0.1][5e3f19f7][ExtensionHostConnection] The client has reconnected.
+2024-11-02 22:23:52.986 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-02 22:23:55.634 [error] Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:218:20)
+2024-11-02 22:23:55.774 [info] [127.0.0.1][d117a0a5][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+2024-11-02 22:24:06.932 [info] [127.0.0.1][d117a0a5][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+2024-11-02 22:24:06.932 [info] [127.0.0.1][d117a0a5][ManagementConnection] The client has reconnected.
+2024-11-02 22:24:07.556 [info] [127.0.0.1][5e3f19f7][ExtensionHostConnection] The client has reconnected.
+2024-11-02 23:18:37.541 [info] [127.0.0.1][5e3f19f7][ExtensionHostConnection] The client has reconnected.
+2024-11-02 23:18:41.057 [info] [127.0.0.1][d117a0a5][ManagementConnection] The client has reconnected.
+2024-11-03 01:10:54.613 [error] Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:218:20)
+2024-11-03 01:10:54.698 [info] [127.0.0.1][d117a0a5][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+2024-11-03 01:11:23.846 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-03 06:19:33.179 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-03 06:20:09.472 [info] [127.0.0.1][d117a0a5][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+2024-11-03 06:20:09.477 [info] [127.0.0.1][d117a0a5][ManagementConnection] The client has reconnected.
+2024-11-03 06:20:09.483 [info] [127.0.0.1][5e3f19f7][ExtensionHostConnection] The client has reconnected.
+2024-11-03 08:14:54.667 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-03 17:44:00.192 [info] [127.0.0.1][d117a0a5][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+2024-11-03 17:44:01.542 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-03 17:44:33.464 [info] [127.0.0.1][d117a0a5][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+2024-11-03 17:44:33.471 [info] [127.0.0.1][d117a0a5][ManagementConnection] The client has reconnected.
+2024-11-03 17:45:28.738 [info] [127.0.0.1][5e3f19f7][ExtensionHostConnection] The client has reconnected.
+2024-11-03 20:32:38.489 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-03 22:25:03.963 [info] [127.0.0.1][d117a0a5][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+2024-11-03 22:25:21.757 [info] [127.0.0.1][d117a0a5][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+2024-11-03 22:25:21.783 [info] [127.0.0.1][d117a0a5][ManagementConnection] The client has reconnected.
+2024-11-03 22:25:23.893 [info] [127.0.0.1][5e3f19f7][ExtensionHostConnection] The client has reconnected.
+2024-11-03 22:27:00.947 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-03 22:27:07.493 [info] [127.0.0.1][5e3f19f7][ExtensionHostConnection] The client has reconnected.
+2024-11-03 22:27:08.083 [info] [127.0.0.1][d117a0a5][ManagementConnection] The client has reconnected.
+2024-11-03 22:54:37.239 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-03 22:55:08.979 [info] [127.0.0.1][d117a0a5][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+2024-11-03 23:10:35.601 [info] [127.0.0.1][d117a0a5][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+2024-11-03 23:10:35.613 [info] [127.0.0.1][5e3f19f7][ExtensionHostConnection] The client has reconnected.
+2024-11-03 23:10:36.178 [info] [127.0.0.1][d117a0a5][ManagementConnection] The client has reconnected.
+2024-11-04 08:53:25.812 [info] [127.0.0.1][d117a0a5][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+2024-11-04 10:43:47.773 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-04 12:44:20.555 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-04 14:07:20.298 [info] [127.0.0.1][5e3f19f7][ExtensionHostConnection] <19111> Extension Host Process exited with code: 0, signal: null.
+2024-11-04 14:18:44.957 [info] [127.0.0.1][d117a0a5][ManagementConnection] The reconnection grace time of 3h has expired, so the connection will be disposed.
+2024-11-04 15:40:39.977 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-04 16:01:57.915 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-04 16:02:24.257 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-04 16:02:24.436 [error] [127.0.0.1][5e3f19f7][ExtensionHostConnection] Unknown reconnection token (seen before).
+2024-11-04 16:02:56.783 [error] [127.0.0.1][d117a0a5][ManagementConnection] Unknown reconnection token (seen before).
+2024-11-04 16:36:17.342 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-04 17:16:02.307 [warning] No ptyHost heartbeat after 6 seconds

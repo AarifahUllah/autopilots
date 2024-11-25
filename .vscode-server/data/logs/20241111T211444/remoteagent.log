@@ -1,0 +1,34 @@
+2024-11-11 21:14:45.919 [info] 
+
+
+
+
+2024-11-11 21:14:45.919 [info] Extension host agent started.
+2024-11-11 21:14:58.068 [error] resolving shell environment failed Unable to resolve your shell environment in a reasonable time. Please review your shell configuration and restart.
+2024-11-11 21:18:45.734 [info] [127.0.0.1][ce9a7869][ManagementConnection] New connection established.
+2024-11-11 21:18:46.889 [error] ptyHost was unable to resolve shell environment Unable to resolve your shell environment in a reasonable time. Please review your shell configuration and restart.
+2024-11-11 21:18:46.900 [error] ptyHost was unable to resolve shell environment Unable to resolve your shell environment in a reasonable time. Please review your shell configuration and restart.
+2024-11-11 21:18:46.900 [error] ptyHost was unable to resolve shell environment Unable to resolve your shell environment in a reasonable time. Please review your shell configuration and restart.
+2024-11-11 21:18:46.901 [error] ptyHost was unable to resolve shell environment Unable to resolve your shell environment in a reasonable time. Please review your shell configuration and restart.
+2024-11-11 21:18:46.901 [error] ptyHost was unable to resolve shell environment Unable to resolve your shell environment in a reasonable time. Please review your shell configuration and restart.
+2024-11-11 21:18:47.073 [info] [127.0.0.1][37c052db][ExtensionHostConnection] New connection established.
+2024-11-11 21:18:48.348 [error] ExtensionHostConnection#buildUserEnvironment resolving shell environment failed Unable to resolve your shell environment in a reasonable time. Please review your shell configuration and restart.
+2024-11-11 21:18:48.461 [info] [127.0.0.1][37c052db][ExtensionHostConnection] <145440> Launched Extension Host Process.
+2024-11-11 21:18:52.538 [error] ptyHost was unable to resolve shell environment Unable to resolve your shell environment in a reasonable time. Please review your shell configuration and restart.
+2024-11-11 21:18:54.016 [error] ptyHost was unable to resolve shell environment Unable to resolve your shell environment in a reasonable time. Please review your shell configuration and restart.
+2024-11-11 21:18:57.732 [error] ExtensionHostConnection#buildUserEnvironment resolving shell environment failed Unable to resolve your shell environment in a reasonable time. Please review your shell configuration and restart.
+2024-11-11 21:19:06.063 [error] ExtensionHostConnection#buildUserEnvironment resolving shell environment failed Unable to resolve your shell environment in a reasonable time. Please review your shell configuration and restart.
+2024-11-11 23:50:36.946 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-11 23:50:56.836 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-11 23:51:07.961 [info] [127.0.0.1][ce9a7869][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+2024-11-11 23:51:13.556 [info] [127.0.0.1][ce9a7869][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+2024-11-11 23:51:13.581 [info] [127.0.0.1][ce9a7869][ManagementConnection] The client has reconnected.
+2024-11-11 23:51:16.188 [info] [127.0.0.1][37c052db][ExtensionHostConnection] The client has reconnected.
+2024-11-12 02:22:02.514 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-12 02:22:27.231 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-12 09:33:57.565 [info] [127.0.0.1][ce9a7869][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+2024-11-12 09:34:16.021 [info] [127.0.0.1][ce9a7869][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+2024-11-12 09:34:16.051 [info] [127.0.0.1][37c052db][ExtensionHostConnection] The client has reconnected.
+2024-11-12 09:39:16.704 [info] [127.0.0.1][ce9a7869][ManagementConnection] The reconnection short grace time of 5m has expired, so the connection will be disposed.
+2024-11-12 09:56:06.490 [error] [127.0.0.1][ce9a7869][ManagementConnection] Unknown reconnection token (seen before).
+2024-11-12 09:56:28.655 [info] [127.0.0.1][37c052db][ExtensionHostConnection] <145440> Extension Host Process exited with code: 0, signal: null.

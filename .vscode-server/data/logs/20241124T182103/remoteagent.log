@@ -1,0 +1,13 @@
+2024-11-24 18:21:03.526 [info] 
+
+
+
+
+2024-11-24 18:21:03.560 [info] Extension host agent started.
+2024-11-24 18:21:03.931 [info] [127.0.0.1][0c9455e2][ManagementConnection] New connection established.
+2024-11-24 18:21:05.029 [info] [127.0.0.1][132cfd90][ExtensionHostConnection] New connection established.
+2024-11-24 18:21:06.801 [info] [127.0.0.1][132cfd90][ExtensionHostConnection] <1872> Launched Extension Host Process.
+2024-11-24 18:21:22.151 [error] [File Watcher] Unexpected error: inotify_add_watch on '/home/aarifah/.vscode-server/data/logs/20241020T122549/exthost1/vscode.github' failed: No such file or directory (EUNKNOWN) (path: /home/aarifah)
+2024-11-24 18:21:22.156 [error] [File Watcher (universal)] inotify_add_watch on '/home/aarifah/.vscode-server/data/logs/20241020T122549/exthost1/vscode.github' failed: No such file or directory
+2024-11-24 19:59:18.557 [warning] [File Watcher (node.js)] Watcher shutdown because watched path got deleted
+2024-11-24 20:14:14.568 [warning] [File Watcher (node.js)] Watcher shutdown because watched path got deleted

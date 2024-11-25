@@ -1,0 +1,93 @@
+2024-11-04 20:26:04.406 [info] 
+
+
+
+
+2024-11-04 20:26:04.500 [info] Extension host agent started.
+2024-11-04 20:26:04.804 [info] [127.0.0.1][d023afee][ManagementConnection] New connection established.
+2024-11-04 20:26:06.942 [info] [127.0.0.1][32b7e898][ExtensionHostConnection] New connection established.
+2024-11-04 20:26:11.930 [info] [127.0.0.1][32b7e898][ExtensionHostConnection] <29096> Launched Extension Host Process.
+2024-11-04 21:51:00.345 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-04 21:51:02.144 [info] [127.0.0.1][d023afee][ManagementConnection] The client has reconnected.
+2024-11-04 21:51:02.746 [info] [127.0.0.1][32b7e898][ExtensionHostConnection] The client has reconnected.
+2024-11-04 22:37:53.936 [error] Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:218:20)
+2024-11-04 22:37:54.162 [info] [127.0.0.1][d023afee][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+2024-11-04 22:38:00.709 [info] [127.0.0.1][d023afee][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+2024-11-04 22:38:00.711 [info] [127.0.0.1][d023afee][ManagementConnection] The client has reconnected.
+2024-11-04 22:38:02.645 [info] [127.0.0.1][32b7e898][ExtensionHostConnection] The client has reconnected.
+2024-11-04 23:52:04.125 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-04 23:52:06.905 [info] [127.0.0.1][d023afee][ManagementConnection] The client has reconnected.
+2024-11-05 00:03:51.416 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-05 05:52:23.783 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-05 13:25:22.879 [info] [127.0.0.1][d023afee][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+2024-11-05 13:26:08.982 [info] [127.0.0.1][d023afee][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+2024-11-05 13:26:09.074 [info] [127.0.0.1][32b7e898][ExtensionHostConnection] The client has reconnected.
+2024-11-05 13:26:09.637 [info] [127.0.0.1][d023afee][ManagementConnection] The client has reconnected.
+2024-11-05 14:23:39.077 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-05 14:23:46.118 [info] [127.0.0.1][d023afee][ManagementConnection] The client has reconnected.
+2024-11-05 14:23:46.421 [info] [127.0.0.1][32b7e898][ExtensionHostConnection] The client has reconnected.
+2024-11-05 17:33:50.746 [info] [127.0.0.1][d023afee][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+2024-11-05 17:33:57.620 [info] [127.0.0.1][d023afee][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+2024-11-05 17:33:57.668 [info] [127.0.0.1][d023afee][ManagementConnection] The client has reconnected.
+2024-11-05 17:33:58.283 [info] [127.0.0.1][32b7e898][ExtensionHostConnection] The client has reconnected.
+2024-11-05 18:07:18.828 [info] [127.0.0.1][32b7e898][ExtensionHostConnection] The client has reconnected.
+2024-11-05 18:07:19.157 [info] [127.0.0.1][d023afee][ManagementConnection] The client has reconnected.
+2024-11-05 19:17:31.507 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-05 19:54:44.956 [info] [127.0.0.1][d023afee][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+2024-11-05 19:54:48.377 [info] [127.0.0.1][d023afee][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+2024-11-05 19:54:48.441 [info] [127.0.0.1][d023afee][ManagementConnection] The client has reconnected.
+2024-11-05 19:54:48.835 [info] [127.0.0.1][32b7e898][ExtensionHostConnection] The client has reconnected.
+2024-11-05 19:55:23.460 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-05 19:55:28.206 [info] [127.0.0.1][d023afee][ManagementConnection] The client has reconnected.
+2024-11-05 19:55:31.477 [info] [127.0.0.1][32b7e898][ExtensionHostConnection] The client has reconnected.
+2024-11-05 20:39:41.141 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-05 20:39:44.952 [info] [127.0.0.1][d023afee][ManagementConnection] The client has reconnected.
+2024-11-05 20:39:45.475 [info] [127.0.0.1][32b7e898][ExtensionHostConnection] The client has reconnected.
+2024-11-05 21:39:10.151 [info] [127.0.0.1][d023afee][ManagementConnection] The client has reconnected.
+2024-11-05 21:39:10.614 [info] [127.0.0.1][32b7e898][ExtensionHostConnection] The client has reconnected.
+2024-11-05 22:26:53.138 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-05 22:26:53.338 [error] Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:218:20)
+2024-11-05 22:26:53.379 [info] [127.0.0.1][d023afee][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+2024-11-05 22:27:10.345 [info] [127.0.0.1][d023afee][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+2024-11-05 22:27:10.389 [info] [127.0.0.1][d023afee][ManagementConnection] The client has reconnected.
+2024-11-05 22:32:12.785 [info] [127.0.0.1][32b7e898][ExtensionHostConnection] <29096> Extension Host Process exited with code: 0, signal: null.
+2024-11-05 22:40:06.452 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-05 22:40:17.438 [info] [127.0.0.1][d023afee][ManagementConnection] The client has reconnected.
+2024-11-05 23:07:42.460 [error] [127.0.0.1][32b7e898][ExtensionHostConnection] Unknown reconnection token (seen before).
+2024-11-05 23:07:44.226 [info] [127.0.0.1][9ea6da5d][ExtensionHostConnection] New connection established.
+2024-11-05 23:07:44.358 [info] [127.0.0.1][9ea6da5d][ExtensionHostConnection] <137179> Launched Extension Host Process.
+2024-11-06 08:43:53.403 [info] [127.0.0.1][d023afee][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+2024-11-06 16:29:15.317 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-06 16:29:33.207 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-06 20:36:16.083 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-06 21:47:04.539 [info] [127.0.0.1][d023afee][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+2024-11-06 21:47:04.566 [info] [127.0.0.1][9ea6da5d][ExtensionHostConnection] The client has reconnected.
+2024-11-06 21:47:04.780 [info] [127.0.0.1][d023afee][ManagementConnection] The client has reconnected.
+2024-11-07 03:26:55.162 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-07 12:03:11.276 [info] [127.0.0.1][d023afee][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+2024-11-07 12:37:11.138 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-07 14:45:54.406 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-07 16:16:07.789 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-07 16:23:15.883 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-07 18:34:11.717 [info] [127.0.0.1][9ea6da5d][ExtensionHostConnection] <137179> Extension Host Process exited with code: 0, signal: null.
+2024-11-07 18:34:27.932 [info] [127.0.0.1][d023afee][ManagementConnection] The reconnection grace time of 3h has expired, so the connection will be disposed.
+2024-11-07 18:55:14.595 [error] [127.0.0.1][9ea6da5d][ExtensionHostConnection] Unknown reconnection token (seen before).
+2024-11-07 18:55:15.242 [error] [127.0.0.1][d023afee][ManagementConnection] Unknown reconnection token (seen before).
+2024-11-07 19:16:58.092 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-07 21:53:57.564 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-07 21:54:41.171 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-08 08:28:25.066 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-08 08:28:33.501 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-08 08:28:38.564 [error] No ptyHost heartbeat after 12 seconds
+2024-11-08 10:05:44.322 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-08 12:47:38.966 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-08 16:48:03.233 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-08 21:55:13.971 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-09 04:30:12.687 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-09 04:30:32.844 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-09 13:04:47.662 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-09 17:52:19.468 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-10 00:05:50.805 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-10 06:07:01.618 [warning] No ptyHost heartbeat after 6 seconds

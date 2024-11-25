@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<sdf version="1.8">
+  <world name="avc-field">
+    <physics type="ode">
+      ...
+    </physics>
+    
+    <scene>
+      <sky>
+      <time>10</time>
+        <clouds>
+            <speed>.5</speed>
+        </clouds>
+      </sky>
+    </scene>
+
+    <model name="box">
+      ...
+    </model>
+
+    <model name="sphere">
+      ...
+    </model>
+
+    <light name="spotlight">
+      ...
+    </light>
+
+  </world>
+</sdf>
