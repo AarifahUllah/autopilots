@@ -7,8 +7,13 @@ but think about simulations on the moon. Specifically for capstone.world the tim
 
 The .world file uses XML and SDF standards. Models were used to include drones and ArUco markers. <br> 
 
-Now, other simulations and programs can be written to make the drone model fly within this .world (think of .launch scripts).</p>
+Also, the ArUco markers positions can be changed by editing the *<pose> </pose>* first two points which are x,y coordinates. This will give random locations for later tests with the drone. <br>
 
+Now, other simulations and programs can be written to make the drone model fly within this .world (think of .launch scripts). Run this command in one terminal:</p>
+```
+gazebo --verbose ~/ardupilot_gazebo/worlds/capstone.world
+```
+<p>In the other terminal, you will run the .launch script.</p>
 ![capstone world_directory](https://github.com/user-attachments/assets/2255394d-d981-472e-938d-cdabfe288d9c)
 
 
