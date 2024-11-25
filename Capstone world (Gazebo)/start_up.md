@@ -10,3 +10,6 @@ The .world file uses XML and SDF standards. Models were used to include drones a
 Now, other simulations c=and programs can be written to make the drone model fly within this .world (think of .launch scripts).</p>
 
 ![capstone world_directory](https://github.com/user-attachments/assets/2255394d-d981-472e-938d-cdabfe288d9c)
+
+
+![capstone world_sim](https://github.com/user-attachments/assets/65682ce2-08d3-47d4-a100-cc2029a0106d)
