@@ -7,7 +7,7 @@ but think about simulations on the moon. Specifically for capstone.world the tim
 
 The .world file uses XML and SDF standards. Models were used to include drones and ArUco markers. <br> 
 
-Now, other simulations c=and programs can be written to make the drone model fly within this .world (think of .launch scripts).</p>
+Now, other simulations and programs can be written to make the drone model fly within this .world (think of .launch scripts).</p>
 
 ![capstone world_directory](https://github.com/user-attachments/assets/2255394d-d981-472e-938d-cdabfe288d9c)
 
