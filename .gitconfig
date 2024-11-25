@@ -1,2 +1,5 @@
 [url "https://"]
 	insteadOf = git://
+[user]
+	email = aarifahullah@gwu.edu
+	name = Aarifah Ullah

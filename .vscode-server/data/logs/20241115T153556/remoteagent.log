@@ -1,0 +1,240 @@
+2024-11-15 15:35:56.355 [info] 
+
+
+
+
+2024-11-15 15:35:56.434 [info] Extension host agent started.
+2024-11-15 15:35:57.510 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] New connection established.
+2024-11-15 15:35:59.467 [info] [127.0.0.1][00c0f8da][ExtensionHostConnection] New connection established.
+2024-11-15 15:36:03.267 [info] [127.0.0.1][00c0f8da][ExtensionHostConnection] <1301> Launched Extension Host Process.
+2024-11-15 17:47:03.659 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-15 17:47:19.837 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] The client has reconnected.
+2024-11-15 17:47:20.699 [info] [127.0.0.1][00c0f8da][ExtensionHostConnection] The client has reconnected.
+2024-11-15 22:50:43.167 [error] Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:218:20)
+2024-11-15 22:50:45.329 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+2024-11-15 22:50:45.342 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-15 22:50:55.775 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+2024-11-15 22:50:55.797 [info] [127.0.0.1][00c0f8da][ExtensionHostConnection] The client has reconnected.
+2024-11-15 22:50:56.037 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] The client has reconnected.
+2024-11-16 05:14:40.973 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-16 08:51:38.979 [error] No ptyHost heartbeat after 12 seconds
+2024-11-16 08:51:51.198 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+2024-11-16 08:54:17.817 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+2024-11-16 08:54:17.839 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] The client has reconnected.
+2024-11-16 08:54:40.935 [info] [127.0.0.1][00c0f8da][ExtensionHostConnection] The client has reconnected.
+2024-11-16 09:16:50.142 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] The client has reconnected.
+2024-11-16 09:16:09.113 [info] [127.0.0.1][00c0f8da][ExtensionHostConnection] The client has reconnected.
+2024-11-16 12:35:06.880 [error] Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:218:20)
+2024-11-16 12:35:08.178 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+2024-11-16 12:35:08.299 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-16 12:35:19.082 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+2024-11-16 12:35:19.091 [info] [127.0.0.1][00c0f8da][ExtensionHostConnection] The client has reconnected.
+2024-11-16 12:35:19.110 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] The client has reconnected.
+2024-11-16 13:05:17.674 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-16 15:40:35.108 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-16 15:41:08.912 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] The client has reconnected.
+2024-11-16 15:41:08.926 [info] [127.0.0.1][00c0f8da][ExtensionHostConnection] The client has reconnected.
+2024-11-16 16:21:39.754 [error] Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:218:20)
+2024-11-16 16:21:13.536 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+2024-11-16 16:21:14.086 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-16 16:21:33.049 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+2024-11-16 16:21:36.277 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] The client has reconnected.
+2024-11-16 16:21:36.467 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-16 16:21:37.417 [info] [127.0.0.1][00c0f8da][ExtensionHostConnection] The client has reconnected.
+2024-11-16 17:39:12.860 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-16 17:39:17.994 [error] Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:218:20)
+2024-11-16 17:39:18.652 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+2024-11-16 17:39:43.040 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+2024-11-16 17:39:43.062 [info] [127.0.0.1][00c0f8da][ExtensionHostConnection] The client has reconnected.
+2024-11-16 17:39:43.135 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] The client has reconnected.
+2024-11-16 22:33:01.002 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-16 22:33:19.055 [error] Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:218:20)
+2024-11-16 22:33:19.508 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+2024-11-16 22:33:34.186 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+2024-11-16 22:33:34.243 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] The client has reconnected.
+2024-11-16 22:33:34.270 [info] [127.0.0.1][00c0f8da][ExtensionHostConnection] The client has reconnected.
+2024-11-17 06:37:28.407 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-17 06:25:23.820 [error] Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:218:20)
+2024-11-17 06:25:24.325 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+2024-11-17 06:25:33.651 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-17 10:57:55.840 [error] No ptyHost heartbeat after 12 seconds
+2024-11-17 10:59:19.750 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+2024-11-17 10:59:19.782 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] The client has reconnected.
+2024-11-17 11:00:51.526 [info] [127.0.0.1][00c0f8da][ExtensionHostConnection] The client has reconnected.
+2024-11-17 15:06:37.425 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-17 15:07:20.099 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+2024-11-17 15:07:28.447 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+2024-11-17 15:07:28.463 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] The client has reconnected.
+2024-11-17 15:07:28.475 [info] [127.0.0.1][00c0f8da][ExtensionHostConnection] The client has reconnected.
+2024-11-17 17:08:23.975 [error] Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:218:20)
+2024-11-17 17:08:24.152 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+2024-11-17 17:08:53.847 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-17 17:08:46.669 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+2024-11-17 17:08:46.692 [info] [127.0.0.1][00c0f8da][ExtensionHostConnection] The client has reconnected.
+2024-11-17 17:08:46.723 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] The client has reconnected.
+2024-11-17 18:12:18.889 [error] Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:218:20)
+2024-11-17 18:12:19.030 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+2024-11-17 18:12:19.044 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-17 18:12:47.552 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+2024-11-17 18:12:47.576 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] The client has reconnected.
+2024-11-17 18:12:56.379 [info] [127.0.0.1][00c0f8da][ExtensionHostConnection] The client has reconnected.
+2024-11-17 22:10:00.629 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-17 22:10:00.092 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] The client has reconnected.
+2024-11-17 22:10:00.658 [info] [127.0.0.1][00c0f8da][ExtensionHostConnection] The client has reconnected.
+2024-11-18 05:33:15.436 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-18 05:17:29.644 [error] Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:218:20)
+2024-11-18 05:17:29.906 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+2024-11-18 08:39:59.532 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-18 08:41:10.039 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+2024-11-18 08:41:10.089 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] The client has reconnected.
+2024-11-18 08:46:07.030 [info] [127.0.0.1][00c0f8da][ExtensionHostConnection] <1301> Extension Host Process exited with code: 0, signal: null.
+2024-11-18 08:47:32.979 [error] [127.0.0.1][00c0f8da][ExtensionHostConnection] Unknown reconnection token (seen before).
+2024-11-18 08:47:34.381 [info] [127.0.0.1][95157dfc][ExtensionHostConnection] New connection established.
+2024-11-18 08:47:34.430 [info] [127.0.0.1][95157dfc][ExtensionHostConnection] <105366> Launched Extension Host Process.
+2024-11-18 10:32:22.016 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-18 10:33:26.757 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-18 11:08:22.232 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+2024-11-18 11:08:23.197 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-18 11:10:12.694 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+2024-11-18 11:10:12.767 [info] [127.0.0.1][95157dfc][ExtensionHostConnection] The client has reconnected.
+2024-11-18 11:10:26.832 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] The client has reconnected.
+2024-11-18 12:40:06.740 [error] Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:218:20)
+2024-11-18 12:40:07.315 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+2024-11-18 12:40:07.340 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-18 12:40:19.703 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+2024-11-18 12:40:19.725 [info] [127.0.0.1][95157dfc][ExtensionHostConnection] The client has reconnected.
+2024-11-18 12:40:19.927 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] The client has reconnected.
+2024-11-18 13:57:14.145 [error] Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:218:20)
+2024-11-18 13:57:14.607 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+2024-11-18 13:57:24.128 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+2024-11-18 13:57:24.139 [info] [127.0.0.1][95157dfc][ExtensionHostConnection] The client has reconnected.
+2024-11-18 13:57:24.310 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] The client has reconnected.
+2024-11-18 14:22:32.770 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] The client has reconnected.
+2024-11-18 14:22:33.219 [info] [127.0.0.1][95157dfc][ExtensionHostConnection] The client has reconnected.
+2024-11-18 15:52:55.208 [error] Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:218:20)
+2024-11-18 15:53:00.259 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+2024-11-18 15:53:00.379 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-18 15:52:35.532 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+2024-11-18 15:52:35.564 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] The client has reconnected.
+2024-11-18 15:52:43.581 [info] [127.0.0.1][95157dfc][ExtensionHostConnection] The client has reconnected.
+2024-11-18 16:44:00.986 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-18 16:44:36.534 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-18 16:44:37.282 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+2024-11-18 16:44:39.779 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+2024-11-18 16:44:39.925 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] The client has reconnected.
+2024-11-18 16:44:42.698 [info] [127.0.0.1][95157dfc][ExtensionHostConnection] The client has reconnected.
+2024-11-18 16:56:43.187 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-18 16:56:59.666 [error] Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:218:20)
+2024-11-18 16:57:00.535 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+2024-11-18 16:57:00.539 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-18 16:57:06.116 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+2024-11-18 16:57:06.132 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] The client has reconnected.
+2024-11-18 16:57:06.690 [info] [127.0.0.1][95157dfc][ExtensionHostConnection] The client has reconnected.
+2024-11-18 18:47:57.434 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-18 18:48:32.134 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+2024-11-18 18:44:25.674 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+2024-11-18 18:44:25.710 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] The client has reconnected.
+2024-11-18 18:49:18.897 [info] [127.0.0.1][95157dfc][ExtensionHostConnection] <105366> Extension Host Process exited with code: 0, signal: null.
+2024-11-18 18:52:01.228 [error] [127.0.0.1][95157dfc][ExtensionHostConnection] Unknown reconnection token (seen before).
+2024-11-18 18:52:01.785 [info] [127.0.0.1][ebd22732][ExtensionHostConnection] New connection established.
+2024-11-18 18:52:01.812 [info] [127.0.0.1][ebd22732][ExtensionHostConnection] <107378> Launched Extension Host Process.
+2024-11-19 06:24:51.890 [error] Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:218:20)
+2024-11-19 06:24:52.205 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+2024-11-19 06:25:11.653 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-19 09:27:54.326 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-19 09:29:07.566 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+2024-11-19 09:29:08.367 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] The client has reconnected.
+2024-11-19 09:29:10.248 [info] [127.0.0.1][ebd22732][ExtensionHostConnection] The client has reconnected.
+2024-11-19 11:18:54.653 [error] Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:218:20)
+2024-11-19 11:19:00.621 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+2024-11-19 11:19:00.779 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-19 11:59:27.837 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+2024-11-19 11:59:27.865 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] The client has reconnected.
+2024-11-19 11:59:49.038 [info] [127.0.0.1][ebd22732][ExtensionHostConnection] The client has reconnected.
+2024-11-19 12:03:24.863 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-19 12:03:32.328 [error] Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:218:20)
+2024-11-19 12:03:34.649 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+2024-11-19 12:03:34.650 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-19 12:03:58.751 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+2024-11-19 12:03:58.765 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] The client has reconnected.
+2024-11-19 12:03:59.690 [info] [127.0.0.1][ebd22732][ExtensionHostConnection] The client has reconnected.
+2024-11-19 12:13:10.001 [error] Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:218:20)
+2024-11-19 12:13:10.841 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+2024-11-19 12:13:18.675 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+2024-11-19 12:13:18.688 [info] [127.0.0.1][ebd22732][ExtensionHostConnection] The client has reconnected.
+2024-11-19 12:13:19.281 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] The client has reconnected.
+2024-11-19 14:07:32.724 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-19 14:08:06.950 [info] [127.0.0.1][ebd22732][ExtensionHostConnection] The client has reconnected.
+2024-11-19 14:08:06.972 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] The client has reconnected.
+2024-11-19 14:26:48.197 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-19 14:27:14.024 [info] [127.0.0.1][ebd22732][ExtensionHostConnection] The client has reconnected.
+2024-11-19 14:27:14.113 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] The client has reconnected.
+2024-11-19 15:09:09.169 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-19 15:09:10.307 [error] Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:218:20)
+2024-11-19 15:09:10.837 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+2024-11-19 15:33:17.041 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-19 15:34:17.037 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+2024-11-19 15:34:17.052 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] The client has reconnected.
+2024-11-19 15:34:17.119 [info] [127.0.0.1][ebd22732][ExtensionHostConnection] The client has reconnected.
+2024-11-19 16:29:35.123 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-19 16:29:56.322 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] The client has reconnected.
+2024-11-19 16:29:56.870 [info] [127.0.0.1][ebd22732][ExtensionHostConnection] The client has reconnected.
+2024-11-19 19:26:21.181 [error] Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:218:20)
+2024-11-19 19:26:22.053 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+2024-11-19 19:26:22.345 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-19 19:26:46.438 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+2024-11-19 19:26:47.515 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] The client has reconnected.
+2024-11-19 19:26:49.354 [info] [127.0.0.1][ebd22732][ExtensionHostConnection] The client has reconnected.
+2024-11-19 21:50:59.491 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-19 21:51:10.484 [error] Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:218:20)
+2024-11-19 21:51:10.645 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+2024-11-19 21:51:22.896 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+2024-11-19 21:51:22.923 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] The client has reconnected.
+2024-11-19 21:51:24.635 [info] [127.0.0.1][ebd22732][ExtensionHostConnection] The client has reconnected.
+2024-11-20 04:33:43.930 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-20 07:46:13.625 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+2024-11-20 07:46:19.405 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+2024-11-20 07:46:19.422 [info] [127.0.0.1][ebd22732][ExtensionHostConnection] The client has reconnected.
+2024-11-20 07:46:22.358 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] The client has reconnected.
+2024-11-20 09:23:05.995 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-20 09:23:12.398 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-20 09:23:14.146 [error] Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:218:20)
+2024-11-20 09:23:14.304 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+2024-11-20 09:23:19.465 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-20 09:23:45.242 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+2024-11-20 09:23:45.254 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] The client has reconnected.
+2024-11-20 09:23:45.267 [info] [127.0.0.1][ebd22732][ExtensionHostConnection] The client has reconnected.
+2024-11-20 09:26:19.962 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-20 09:58:30.030 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-20 09:58:59.977 [info] [127.0.0.1][ebd22732][ExtensionHostConnection] The client has reconnected.
+2024-11-20 09:59:02.241 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] The client has reconnected.
+2024-11-20 12:31:29.125 [error] Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:218:20)
+2024-11-20 12:31:35.784 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+2024-11-20 12:31:54.314 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-20 12:32:59.817 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-20 13:44:02.017 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-20 15:32:58.226 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+2024-11-20 15:32:58.246 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] The client has reconnected.
+2024-11-20 15:32:59.732 [info] [127.0.0.1][3bbfc0c5][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.

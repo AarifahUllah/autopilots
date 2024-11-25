@@ -7,3 +7,8 @@
 2024-11-02 13:54:39.548 [info] [127.0.0.1][42d6b738][ManagementConnection] New connection established.
 2024-11-02 13:54:40.445 [info] [127.0.0.1][0104c1d6][ExtensionHostConnection] New connection established.
 2024-11-02 13:54:42.321 [info] [127.0.0.1][0104c1d6][ExtensionHostConnection] <2305> Launched Extension Host Process.
+2024-11-02 15:20:10.269 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-02 15:20:16.174 [info] [127.0.0.1][0104c1d6][ExtensionHostConnection] The client has reconnected.
+2024-11-02 15:20:19.560 [info] [127.0.0.1][42d6b738][ManagementConnection] The client has reconnected.
+2024-11-02 16:21:39.693 [warning] No ptyHost heartbeat after 6 seconds
+2024-11-02 16:22:04.960 [info] [127.0.0.1][42d6b738][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...

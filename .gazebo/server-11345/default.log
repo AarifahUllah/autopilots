@@ -4,9 +4,11 @@ Released under the Apache 2 License.
 http://gazebosim.org
 
 
-(1730570132 100477285) [Msg] Waiting for master.
-(1730570132 110862585) [Msg] Connected to gazebo master @ http://127.0.0.1:11345
-(1730570132 110937985) [Msg] Publicized address: 172.17.172.218
-(1730570133 35268883) [Msg] Loading world file [/usr/share/gazebo-11/worlds/empty.world]
-(1730570133 168732082) Init world[default]
-(1730571722 233613841) [Wrn] [Publisher.cc:135] Queue limit reached for topic /gazebo/default/physics/contacts, deleting message. This warning is printed only once.
+(1732497266 265156358) [Msg] Waiting for master.
+(1732497266 274694861) [Msg] Connected to gazebo master @ http://127.0.0.1:11345
+(1732497266 276104510) [Msg] Publicized address: 172.17.172.218
+(1732497267 41619861) [Msg] Loading world file [/home/aarifah/ardupilot_gazebo/worlds/capstone.world]
+(1732497267 648888048) Init world[avc-field]
+(1732497269 300726701) [iris_demo] ArduPilot ready to fly. The force will be with you
+(1732497277 683796720) [Wrn] [Publisher.cc:135] Queue limit reached for topic /gazebo/avc-field/pose/local/info, deleting message. This warning is printed only once.
+(1732497691 777720230) [Wrn] [Publisher.cc:135] Queue limit reached for topic /gazebo/avc-field/physics/contacts, deleting message. This warning is printed only once.

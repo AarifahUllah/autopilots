@@ -224,3 +224,43 @@ cat startsitl.sh
 cd ..
 cd
 cd ~/ardupilot/ArduCopter/ && sim_vehicle.py -v ArduCopter -f gazebo-iris --console
+gazebo
+ls
+git init
+git add .
+git commit -m "set up of work environment"
+git config --global user.email "aarifahullah@gwu.edu"
+git config --global user.name "Aarifah Ullah"
+git commit -m "set up of work environment"
+git push
+git remote add origin https://github.com/AarifahUllah/autopilots.git
+git push -u origin main
+git push -u origin master
+git checkout main
+git checkout -b field
+git branch
+git pull origin master
+git branch
+clear
+gazebo
+ls
+cd ardupilot_gazebo
+ls
+la
+cd ..
+sim_vehicle.py -v ArduCopter -f gazebo-iris --map --console
+sim_vehicle.py -v ArduCopter -f gazebo-iris --map --console
+gazebo --verbose ~/ardupilot_gazebo/worlds/capstone.world
+clean
+ls
+sim_vehicle.py -v ArduCopter -f gazebo-iris --map --console
+pkill -f arducopter
+pkill -f mavproxy.py
+sim_vehicle.py -v ArduCopter -f gazebo-iris --map --console
+cd ardupilot_gazebo
+cd ..
+gazebo --verbose ~/ardupilot_gazebo/worlds/iris_arducopter_runway.world
+gazebo --verbose ~/ardupilot_gazebo/worlds/capstone.world
+ssh rdc1-orin@10.8.30.17
+roslaunch iq_sim runway.launch
+ssh rdc1-orin@10.8.30.17
