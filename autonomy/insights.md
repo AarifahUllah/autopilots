@@ -61,4 +61,3 @@ takeoff 15
   - Daniel's Project Source Code: https://www.ddmckinnon.com/wp-content/uploads/2015/12/WHOZ-CHILLIN.txt
   - MAVLink for Python, pymavlink: https://mavlink.io/en/mavgen_python/
   - MAVLink Standard Definitions: [https://mavlink.io/en/messages/](https://mavlink.io/en/messages/common.html)
-  
