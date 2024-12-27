@@ -1,6 +1,6 @@
-# :dizzy: Insights and Thoughts :dizzy:
+# :dizzy: Insights :dizzy:
 
-<p> An explanation of all the components and how they connect. I think a lot of this project in terms of drone programming and gettining to autonomous flight is actually very little coding! But understanding all the pieces and how they connect.
+<p> An explanation of all the components and how they connect. I think a lot of this project in terms of drone programming and gettiing to autonomous flight is actually relatively less coding! But understanding all the pieces and how they connect.
 That has taken the most time, and unfortunately, there is limited documentation out there that explains all the pieces well. There's ArduPilot, but to find all that you need at once is challenging. I think I'd recommend reading the code base, going through all
 ArduPilot files, and seeing examples of people who have programmed drones to fly and their code. I personally really like DroneDojo's videos. IQ Tutorials are also good. Both together gives you a better sense on what to do since IQ teaches you how to set up the
 environment and some basics while DroneDojo gives you real life examples of how to go from simulations in Gazebo to real drone builds and autonomy.</p>
