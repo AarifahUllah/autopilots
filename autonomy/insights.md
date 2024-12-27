@@ -40,14 +40,16 @@ takeoff 15
 ```
 ### Helpful Links
 - MAVLink Commands in Guided Mode: https://ardupilot.org/dev/docs/copter-commands-in-guided-mode.html
+  
   <p> This is a bit misleading. These are some example commands you can send from Guided mode, but you can also program these in an Autonomous script flight. For example, you can say to mean fly 10 meters forward of the current position: </p>
+  
   ```
   message SET_POSITION_TARGET_LOCAL_NED 0 0 0 9 3576 10 0 0 0 0 0 0 0 0 0 0
   ```
 - MAVLink Commands for Auto mode: https://ardupilot.org/copter/docs/common-mavlink-mission-command-messages-mav_cmd.html#mav-cmd-nav-land
 
 ## MAVROS, pymavlink, DroneKit :sparkles:
-<p>DroneKit is *super* helpful, but I don't know why, it looks like they discontinued their documentation pages for it. The best places to look is their GitHub repository (in this Repo's README.md) and examples from DroneDojo and others. I really liked this tutorial by
+<p>DroneKit is super helpful, but I don't know why, it looks like they discontinued their documentation pages for it. The best places to look is their GitHub repository (in this Repo's README.md) and examples from DroneDojo and others. I really liked this tutorial by
   Daniel D. McKinnon who explains that he has no idea about programming, but managed to make a drone work for a fun project he wanted to try in just 2 days! Which shows just how easy DroneKit is to work with / being beginner-friendly. It essentially is an abstraction
   above reading MAVLink messages like the example above. You wouldn't have to remember a string of parameters and numbers. </p>
 
