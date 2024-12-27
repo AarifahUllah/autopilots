@@ -53,8 +53,12 @@ takeoff 15
   Daniel D. McKinnon who explains that he has no idea about programming, but managed to make a drone work for a fun project he wanted to try in just 2 days! Which shows just how easy DroneKit is to work with / being beginner-friendly. It essentially is an abstraction
   above reading MAVLink messages like the example above. You wouldn't have to remember a string of parameters and numbers. </p>
 
+<p> pymavlink, MAVLink for Python, described to be lightweight and good for message passing between drone and Ground Station, and between drones.</p>
+
 ### Helpful Links
 
   - DroneKit-Python Tutorial by Daniel D. McKinnon: https://www.ddmckinnon.com/2015/12/30/idiots-guide-to-dronekit-python-a-journey-to-whoz-chillin/
   - Daniel's Project Source Code: https://www.ddmckinnon.com/wp-content/uploads/2015/12/WHOZ-CHILLIN.txt
+  - MAVLink for Python, pymavlink: https://mavlink.io/en/mavgen_python/
+  - MAVLink Standard Definitions: [https://mavlink.io/en/messages/](https://mavlink.io/en/messages/common.html)
   
