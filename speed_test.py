@@ -78,7 +78,7 @@ def main():
     print("Flying 5m/s NORTH relative to the front of the drone")
     counter = 0
     while counter < 5 : # change counter based on speed
-        send_local_ned_velocity(5, 0 0) #5m/s 
+        send_local_ned_velocity(5, 0, 0) #5m/s 
         time.sleep(1) #pause 1 second
         counter = counter + 1
 
