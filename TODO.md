@@ -4,7 +4,7 @@
 
 <p> Both drones in the same world </p>
 1. Figure out port connections for SITL, Gazebo, and MAVProxy instances
-- Start two drones with DroneKit using .connect() in same script
+2. Start two drones with DroneKit using .connect() in same script
 - Connect both drones together in DroneKit and pass messages
 
 <p> Visual streaming and processing </p>
