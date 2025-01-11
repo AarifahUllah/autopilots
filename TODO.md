@@ -1,9 +1,9 @@
-# 🪷 THINGS TO WORK ON  🪷
+# :lotus: THINGS TO WORK ON :lotus:
 
 <p> A list of things that need to be done for navigation simulations and later physical drone implementation.</p>
 
 <p> Both drones in the same world </p>
-1. Figure out port connections for SITL, Gazebo, and MAVProxy instances
+- [ ] Figure out port connections for SITL, Gazebo, and MAVProxy instances
 2. Start two drones with DroneKit using .connect() in same script
 - Connect both drones together in DroneKit and pass messages
 
