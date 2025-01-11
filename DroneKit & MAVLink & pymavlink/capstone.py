@@ -8,9 +8,13 @@ Looks like we can specify where to connect both drones for communication
 passing using function parameters e.g. msg_send(UDP_addr), msg_receive(UDP_addr)
 
 Questions:
-1. On competition day, once we see where the ArUco markers are, can we preconfigure 
-scripts with their locations. (determine their GPS coordinates beforehand?)
 2. In Gazebo simulated world, can you find GPS coordinates and points
+
+
+try to get both vehicles in the same script. it's possible and then try to implement message-passing
+
+first, upon starting, store both drone's starting position. and play a starting tune.. fun!
+play tunes for each of the major milestones in challenge: starting, ending, marker discovery, message sending
 """
 
 ####### DEPENDENCIES ########
@@ -26,12 +30,14 @@ from pymavlink import mavutil
 EARTH_RADIUS = 6371010.0 
 EARTH_RADIUS_spherical = 6378137.0
 
-# ArUco marker locations
-marker_locations = {
-    "marker_17": LocationGlobalRelative(),
-    "marker_22": LocationGlobalRelative(),
-    "marker_200": LocationGlobalRelative(),
+# Boundary points that define field
+boundary_locations = {
+    "point_A": LocationGlobalRelative(),
+    "point_B": LocationGlobalRelative(),
+    "point_C": LocationGlobalRelative(),
+    "point_D": LocationGlobalRelative(),
 }
+#figure out difference between LocationGlobalRelative & just LocationGlobal
 
 # ArduCopter failsafe behaviors
 failsafe_table = {
@@ -52,29 +58,24 @@ parser.add_argument('--connect',
 args = parser.parse_args()
 
 connection_string = args.connect
-sitl = None
-
-# Start SITL if no connection specified
-if not connection_string:
-    import dronekit_sitl
-    sitl = dronekit_sitl.start_default()
-    connection_string = sitl.connection_string()
 
 # Connect to the drone
 # Set to True to make sure default attributes are populated before connect() returns
-print('Connecting to drone on: %s' % connection_string)
-drone = connect(connection_string, wait_ready= True) 
+print('Connecting to scout on: %s' % connection_string)
+scout = connect(connection_string, wait_ready= True) 
 
-# Get drone home location
-while not drone.home_location:
-    cmds = drone.commands
-    cmds.download()
-    cmds.wait_ready()
-    if not drone.home_location:
+# Get scout home location
+while not scout.home_location:
+    scout_cmds = drone.commands
+    scout_cmds.download()
+    scout_cmds.wait_ready()
+    if not scout_cmds.home_location:
         print('\n Waiting for home location...')
 
 # Received home location
-print('\n Home location: %s' % drone.home_location) # looks like home location is always stored, need to verify
+print('\n Home location: %s' % scout_cmds.home_location) # looks like home location is always stored, need to verify
+
+# Connect to Package Delivery Drone in same way
 
 
 ####### FUNCTIONS ########
