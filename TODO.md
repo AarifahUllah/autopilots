@@ -2,10 +2,10 @@
 
 <p> A list of things that need to be done for navigation simulations and later physical drone implementation.</p>
 
-<p> Both drones in the same world </p>
-- Figure out port connections for SITL, Gazebo, and MAVProxy instances
-2. Start two drones with DroneKit using .connect() in same script
-- Connect both drones together in DroneKit and pass messages
+<p> Both drones in the same world <br>
+- Figure out port connections for SITL, Gazebo, and MAVProxy instances <br>
+- Start two drones with DroneKit using .connect() in same script <br>
+- Connect both drones together in DroneKit and pass messages <br> </p>
 
 <p> Visual streaming and processing </p>
 - MAVLink video streaming, not exactly necessary to see what drone sees but at least we need to connect current visual processing scripts and have navigation with it. e.g. precision landing on ArUco
