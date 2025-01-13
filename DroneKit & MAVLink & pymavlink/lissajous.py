@@ -1,10 +1,23 @@
 """
 
-Lissajous search mission. The drone's starting point is random.
+Lissajous search mission. The drone's starting point is random. The only information we need is the center of the field. 
 
-The only information we have is the center of the field. 
+Lissajous curves are defined by two parametric equations:
+[x,y] = < Ax*sin(wx * t + phix), Ay*sin(wy * t + phiy) >
+    Ax = Amplitude in X-direction
+    Ay = Amplitude in Y-direction
 
-Lissajous automatically bounds the field dimensions, so no need to specify boundary locations.
+    wx = Angular frequency in X-dir
+    wy = Angular frequency in Y-dir
+
+    phix = Phase shift in X-dir
+    phiy = Phase shift in Y-dir
+
+
+Lissajous automatically bounds the field dimensions with Ax and Ay. A geofence will still be created 
+for extra caution and fail-safe behavior. Adjusting the six parameters leads to infinitely many patterns.
+If ratio rw = wx/wy is rational, the curve is cyclical (repeating). Irrational -> the pattern doesn't ever 
+repeat.
 
 """
 
@@ -12,23 +25,46 @@ Lissajous automatically bounds the field dimensions, so no need to specify bound
 from dronekit import connect, VehicleMode, LocationGlobalRelative, LocationGlobal, Command
 from pymavlink import mavutil
 import time
+import numpy as np
 import math
 import argparse
 
-
 #############CONSTANTS##############
+T_STEP = pi/8 # defines granularity of curve with more (x,y) coordinates
+T_MAX = 64 # how many time points we want from 0 - T_MAX (though it doesn't have to be 0) & should be enough for the challenge duration
+
+AMP_X = 25 # meters
+AMP_Y = 25 # field dimensions are 90ft x 90ft ~ approx. 27.4 m. The curve will be slightly less than boundary to not trigger geofence
+W_X = pi/2
+Y_X = 0
+SCOUT_ALT = 10 # meters ~ approx. 33 ft
+
+#####SETTING UP THE LISSAJOUS CURVE#######
+print("Lissajous curve search pattern")
+#let's make a repeating figure 8 for starters...
+longitude_arr = np.arange(AMP_X * AMP_Y).reshape((AMP_X, AMP_Y))
+print(longitude_arr)
+
+latitude_arr = np.arrange((AMP_X * AMP_Y)).reshape((AMP_X, AMP_Y)) # store longitude and latitude coordinates every 1 meter apart
+print(latitude_arr)
+
+for 0 to T_MAX:
+    X_point = math.ceil( AMP_X * sin(W_X * T_STEP * T_MAX + PHI_X) )
+    Y_point = math.ceil( AMP_Y * sin(W_Y * T_STEP * T_MAX + PHI_Y) )
+    print("(x,y) = (%s, %s)" %(X_point, Y_point))
+    print("longitude point: %s" %longitude_arr[X_point][Y_point])
+    print("latitude point: %s" %latitude_arr[X_point][Y_point])
+
+print("YAY Lissajous curve made ^_^")
 
 """
-RADIUS = 5 # Radius of circle in meters
-
-# Boundary points that define field at Xelevate location
+# Boundary points that define field at Xelevate location (for geofence and breaches)
 
 A.------- B.
 |         |
 |         |
 |         |
 C.------- D.
-
 
 boundary_locations = {
     "point_A": LocationGlobalRelative(39.234743, -77.546500, 10),
@@ -171,9 +207,9 @@ def arm_and_takeoff(aTargetAltitude):
 
 def main():
 
-    print('Create a new mission')
-    adds_square_mission(scout.location.global_frame, 5)
-    print("Drone's starting location: %s" % scout.location.global_frame)
+    #print('Create a new mission')
+    #adds_square_mission(scout.location.global_frame, 5)
+    #print("Drone's starting location: %s" % scout.location.global_frame)
     
     download_mission()
 
@@ -183,6 +219,7 @@ def main():
     scout.commands.next = 0
     scout.mode = VehicleMode("AUTO")
 
+    """
     while True:
         nextwaypoint=scout.commands.next
         print('Distance to waypoint (%s): %s' % (nextwaypoint, distance_to_current_waypoint()))
@@ -194,6 +231,14 @@ def main():
             print("Exit 'standard' mission when start heading to final waypoint (5)")
             break;
         time.sleep(1)
+    """
+
+    print("Flying 5m/s NORTH relative to the front of the drone for 25m")
+    counter = 0
+    while counter < 5 : # change counter based on speed
+        send_local_ned_velocity(5, 0, 0) #5m/s 
+        time.sleep(1) #pause 1 second
+        counter = counter + 1
 
     print('Return to launch')
     scout.mode = VehicleMode("RTL")
