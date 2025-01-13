@@ -51,7 +51,7 @@ takeoff 15
 - MAVLink Commands for Auto mode: https://ardupilot.org/copter/docs/common-mavlink-mission-command-messages-mav_cmd.html#mav-cmd-nav-land
 
 ## MAVROS, pymavlink, DroneKit :sparkles:
-<p>DroneKit is super helpful, but I don't know why, it looks like they discontinued their documentation pages for it. The best places to look is their GitHub repository (in this Repo's README.md) and examples from DroneDojo and others. I really liked this tutorial by
+<p>DroneKit is super helpful. The best places to look is their docs and GitHub repository and examples from DroneDojo and others. I really liked this tutorial by
   Daniel D. McKinnon who explains that he has no idea about programming, but managed to make a drone work for a fun project he wanted to try in just 2 days! Which shows just how easy DroneKit is to work with / being beginner-friendly. It essentially is an abstraction
   above reading MAVLink messages like the example above. You wouldn't have to remember a string of parameters and numbers. </p>
 
@@ -59,6 +59,8 @@ takeoff 15
 
 ### Helpful Links
 
+  - DroneKit Documentation: https://dronekit.netlify.app/about/
+  - DroneKit Python: https://rtgit.rta.vn/rtr_khangpt/dronekit-python/-/tree/master/dronekit
   - DroneKit-Python Tutorial by Daniel D. McKinnon: https://www.ddmckinnon.com/2015/12/30/idiots-guide-to-dronekit-python-a-journey-to-whoz-chillin/
   - Daniel's Project Source Code: https://www.ddmckinnon.com/wp-content/uploads/2015/12/WHOZ-CHILLIN.txt
   - MAVLink for Python, pymavlink: https://mavlink.io/en/mavgen_python/
@@ -114,6 +116,13 @@ sim_vehicle.py -v ArduCopter -f gazebo-iris --map --console
 ```
 gazebo --verbose ~/ardupilot_gazebo/worlds/iris_arducopter_runway.world
 ```
+
+## Search patterns
+
+- Lissajous curves as aerial search patterns: https://www.nature.com/articles/s41598-024-60803-2
+- An Investigation of Search Algorithms for Aerial Reconnaissance of an Area Target: https://www.ieworldconference.org/content/WP2022/Papers/18-GDRKMCC-22.pdf
+
+<p> Right now, I'm doing a cyclical pattern, but when I get to a certain point (get the simulation to work after collecting the spline waypointd and sending them to drone), then I can try an irrational pattern.</p>
 
 ## Notes
 
