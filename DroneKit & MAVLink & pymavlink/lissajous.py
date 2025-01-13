@@ -30,13 +30,15 @@ import math
 import argparse
 
 #############CONSTANTS##############
+pi = math.pi
 T_STEP = pi/8 # defines granularity of curve with more (x,y) coordinates
 T_MAX = 64 # how many time points we want from 0 - T_MAX (though it doesn't have to be 0) & should be enough for the challenge duration
-
 AMP_X = 25 # meters
 AMP_Y = 25 # field dimensions are 90ft x 90ft ~ approx. 27.4 m. The curve will be slightly less than boundary to not trigger geofence
-W_X = pi/2
-Y_X = 0
+W_X = 1
+W_Y = 2
+PHI_X = pi/2
+PHI_Y = 0
 SCOUT_ALT = 10 # meters ~ approx. 33 ft
 
 #####SETTING UP THE LISSAJOUS CURVE#######
@@ -48,9 +50,9 @@ print(longitude_arr)
 latitude_arr = np.arrange((AMP_X * AMP_Y)).reshape((AMP_X, AMP_Y)) # store longitude and latitude coordinates every 1 meter apart
 print(latitude_arr)
 
-for 0 to T_MAX:
-    X_point = math.ceil( AMP_X * sin(W_X * T_STEP * T_MAX + PHI_X) )
-    Y_point = math.ceil( AMP_Y * sin(W_Y * T_STEP * T_MAX + PHI_Y) )
+for T_RANGE in range(0, T_MAX):
+    X_point = math.ceil( AMP_X * math.sin(W_X * T_STEP * T_RANGE + PHI_X) )
+    Y_point = math.ceil( AMP_Y * math.sin(W_Y * T_STEP * T_RANGE + PHI_Y) )
     print("(x,y) = (%s, %s)" %(X_point, Y_point))
     print("longitude point: %s" %longitude_arr[X_point][Y_point])
     print("latitude point: %s" %latitude_arr[X_point][Y_point])
@@ -204,6 +206,20 @@ def arm_and_takeoff(aTargetAltitude):
             print("Reached target altitude")
             break
         time.sleep(1)
+        
+#Send a velocity command with +x being the heading of the drone.
+def send_local_ned_velocity(vx, vy, vz):
+	msg = scout.message_factory.set_position_target_local_ned_encode(
+		0,
+		0, 0,
+		mavutil.mavlink.MAV_FRAME_BODY_OFFSET_NED,
+		0b0000111111000111,
+		0, 0, 0,
+		vx, vy, vz,
+		0, 0, 0,
+		0, 0)
+	scout.send_mavlink(msg)
+	scout.flush()
 
 def main():
 
@@ -216,7 +232,7 @@ def main():
     arm_and_takeoff(10)
     print("Starting mission")
 
-    scout.commands.next = 0
+    #scout.commands.next = 0
     scout.mode = VehicleMode("AUTO")
 
     """
