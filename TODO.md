@@ -23,7 +23,6 @@ Before I forget. Actually what could work is that as soon as we spot the drone, 
 ### Search patterns
 
 <p>
-- Circular / Elliptical search <br>
 - Lissajous search <br>
 - Mothership idea <br>
 - Bounded box search <br>
@@ -35,6 +34,7 @@ Before I forget. Actually what could work is that as soon as we spot the drone, 
 - GPS and RTK module research, find something that works both indoors and outdoors. <br>
 - Triangulate distances. We have two starting points, then later a third point with the marker. <br>
 - Make a map of the field in 1 m increments with corresponding GPS coordinate. May not be needed. <br>
+- GPS sensor filtering <br>
 - Calibrate GPS and RTK modules <br>
 </p>
 
