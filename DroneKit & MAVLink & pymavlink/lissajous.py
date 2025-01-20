@@ -1,5 +1,4 @@
 """
-
 Lissajous search mission. The drone's starting point is random. The only information we need is the center of the field. 
 
 Lissajous curves are defined by two parametric equations:
@@ -19,6 +18,7 @@ for extra caution and fail-safe behavior. Adjusting the six parameters leads to 
 If ratio rw = wx/wy is rational, the curve is cyclical (repeating). Irrational -> the pattern doesn't ever 
 repeat.
 
+Latitude, longitude, altitude, heading
 """
 
 #############DEPENDENCIES#############
@@ -29,38 +29,146 @@ import numpy as np
 import math
 import argparse
 
-#############CONSTANTS##############
+"""
+
+Lissajous search mission. The drone's starting point is random. The only information we need is the center of the field.
+
+Lissajous curves are defined by two parametric equations:
+[x,y] = < Ax*sin(wx * t + phix), Ay*sin(wy * t + phiy) >
+    Ax = Amplitude in X-direction
+    Ay = Amplitude in Y-direction
+
+    wx = Angular frequency in X-dir
+    wy = Angular frequency in Y-dir
+
+    phix = Phase shift in X-dir
+    phiy = Phase shift in Y-dir
+
+
+Lissajous automatically bounds the field dimensions with Ax and Ay. A geofence will still be created
+for extra caution and fail-safe behavior. Adjusting the six parameters leads to infinitely many patterns.
+If ratio rw = wx/wy is rational, the curve is cyclical (repeating). Irrational -> the pattern doesn't ever
+repeat.
+
+latitude, longitude, altitude, heading
+
+Navigation has 2-3 different phases:
+1. Scout search pattern
+2. Breaking out of pattern to maneuver to marker
+3. And if Package Delivery involved, communicate waypoint to then maneuver to marker (one extra step)
+"""
+
+########CONSTANTS#############
 pi = math.pi
 T_STEP = pi/8 # defines granularity of curve with more (x,y) coordinates
 T_MAX = 64 # how many time points we want from 0 - T_MAX (though it doesn't have to be 0) & should be enough for the challenge duration
-AMP_X = 25 # meters
-AMP_Y = 25 # field dimensions are 90ft x 90ft ~ approx. 27.4 m. The curve will be slightly less than boundary to not trigger geofence
+AMP_X = 10 # meters
+AMP_Y = 10 # field dimensions are 90ft x 90ft ~ approx. 27.4 m. The curve will be slightly less than boundary to not trigger geofence
 W_X = 1
 W_Y = 2
 PHI_X = pi/2
 PHI_Y = 0
 SCOUT_ALT = 10 # meters ~ approx. 33 ft
+CENTER_LAT = -35.363262
+CENTER_LONG = 149.165237 # Default Gazebo/SITL params
+EARTH_RADIUS = 6378.137 # km
+
+#############CONNECTION#############
+parser = argparse.ArgumentParser(description='Demonstrates basic mission operations.')
+parser.add_argument('--connect', 
+                   help="vehicle connection target string. If not specified, SITL automatically started and used.")
+args = parser.parse_args()
+
+connection_string = args.connect
+
+# Connect to the Vehicle
+print('Connecting to vehicle on: %s' % connection_string)
+scout = connect(connection_string, wait_ready=True)
 
 #####SETTING UP THE LISSAJOUS CURVE#######
-print("Lissajous curve search pattern")
-#let's make a repeating figure 8 for starters...
-longitude_arr = np.arange(AMP_X * AMP_Y).reshape((AMP_X, AMP_Y))
-print(longitude_arr)
+def lissajous_search():
+    print("Lissajous curve search pattern") #let's make a repeating figure 8 for starters...
 
-latitude_arr = np.arrange((AMP_X * AMP_Y)).reshape((AMP_X, AMP_Y)) # store longitude and latitude coordinates every 1 meter apart
-print(latitude_arr)
+    """
 
-for T_RANGE in range(0, T_MAX):
-    X_point = math.ceil( AMP_X * math.sin(W_X * T_STEP * T_RANGE + PHI_X) )
-    Y_point = math.ceil( AMP_Y * math.sin(W_Y * T_STEP * T_RANGE + PHI_Y) )
-    print("(x,y) = (%s, %s)" %(X_point, Y_point))
-    print("longitude point: %s" %longitude_arr[X_point][Y_point])
-    print("latitude point: %s" %latitude_arr[X_point][Y_point])
+    The array represents the Cartesian plane with the origin being in the middle of the array.
 
-print("YAY Lissajous curve made ^_^")
+    +-------^-------+
+    |       |       |
+    |       |       |
+    <-------+------->
+    |       |       |
+    |       |       |
+    +---------------+
+
+    The array will need to be twice the amplitudes in both directions + 1 to include the four quadrants.
+    The amplitudes will only count half, and are therefore known as half-amplitudes.
+
+    y-coordinates corrspond to rows. x-coordinates correspond to the columns.
+
+    To access the cell that corresponds to the appropriate (x,y) points, follow this mapping:
+
+    cell array[row] = -Y_point + AMP_Y
+    cell array[column] = X_point + AMP_X
+
+    So, an (x,y) pair maps to array[-Y_point + AMP_Y][X_point + AMP_X].
+    and the origin (0,0), center of field, is array[AMP_Y][AMP_X]
+    """
+
+    cmds = scout.commands
+    cmds.download() # Download current list of commands FROM drone
+    cmds.wait_ready() # wait until download is complete
+
+    print(" Clear any existing commands")
+    cmds.clear() # Clear list before adding new ones
+
+    rows = 2*AMP_Y + 1
+    columns = 2*AMP_X + 1 # store longitude and latitude coordinates every 1 meter apart
+
+    met_to_deg = (1 / ((pi/180) * EARTH_RADIUS)) / 1000 # converting between degrees to meters, constant
+
+    # latitude is approx. constant at all points of the Earth
+    # new latitude = original latitude + translation_meters * meters_to_degrees
+    # positive translation -> move up
+    # negative translation -> move down
+    np.set_printoptions(precision=10)
+    latitude_arr = np.arange(rows*columns, dtype=np.float64).reshape(rows, columns)
+    for row in range(0, rows):
+    for col in range(0, columns):
+        latitude_arr[row][col] = CENTER_LAT +  (AMP_Y - row) * met_to_deg
+        #print(latitude_arr[row][col])
+
+    # longitude varies with latitude degrees
+    # new longitude = original longitude + (translation_mters * meters_to_degrees / cos(original long. * pi/180))
+    # positive translation -> move left
+    # negative translation -> move down
+    longitude_arr = np.arange(rows*columns, dtype=np.float64).reshape(rows, columns)
+    for row in range(0, rows):
+    for col in range(0, columns):
+        longitude_arr[row][col] = CENTER_LONG + ((AMP_X - col) * met_to_deg)/(math.cos(CENTER_LAT * (pi/180)))
+        #print(longitude_arr[row][col])
+
+    print("Add lissajous waypoints.")
+     
+    #Add MAV_CMD_NAV_TAKEOFF command. This is ignored if the vehicle is already in the air.
+    cmds.add(Command( 0, 0, 0, mavutil.mavlink.MAV_FRAME_GLOBAL_RELATIVE_ALT, mavutil.mavlink.MAV_CMD_NAV_TAKEOFF, 0, 0, 0, 0, 0, 0, 0, 0, SCOUT_ALT))
+
+    for T_RANGE in range(0, T_MAX):
+        X_point = math.ceil( AMP_X * math.sin(W_X * T_STEP * T_RANGE + PHI_X) )
+        Y_point = math.ceil( AMP_Y * math.sin(W_Y * T_STEP * T_RANGE + PHI_Y) )
+        print("(x,y) = (%s, %s). lat: %s. long: %s" %(X_point, Y_point, format(latitude_arr[-Y_point + AMP_Y][X_point + AMP_X], ".10f"), format(longitude_arr[-Y_point + AMP_Y][X_point + AMP_X],".10f")))
+        cmds.add(Command( 0, 0, 0, mavutil.mavlink.MAV_FRAME_GLOBAL_RELATIVE_ALT, 
+                                   mavutil.mavlink.MAV_CMD_NAV_WAYPOINT, 0, 0, 0, 0, 0, 0, 
+                                   latitude_arr[-Y_point + AMP_Y][X_point + AMP_X], 
+                                   longitude_arr[-Y_point + AMP_Y][X_point + AMP_X], SCOUT_ALT))))
+
+    print("YAY Lissajous curve made ^_^")
+
+    print(" Upload search pattern to vehicle")
+    cmds.upload()
 
 """
-# Boundary points that define field at Xelevate location (for geofence and breaches)
+Boundary points that define field at Xelevate location (for geofence and breaches)
 
 A.------- B.
 |         |
@@ -75,26 +183,6 @@ boundary_locations = {
     "point_D": LocationGlobalRelative(39.234501, -77.546227, 10),
 }
 """
-#############CONNECTION#############
-parser = argparse.ArgumentParser(description='Demonstrates basic mission operations.')
-parser.add_argument('--connect', 
-                   help="vehicle connection target string. If not specified, SITL automatically started and used.")
-args = parser.parse_args()
-
-connection_string = args.connect
-
-
-# Connect to the Vehicle
-print('Connecting to vehicle on: %s' % connection_string)
-scout = connect(connection_string, wait_ready=True)
-
-def download_mission():
-    """
-    Download the current mission from the vehicle.
-    """
-    cmds = scout.commands
-    cmds.download()
-    cmds.wait_ready() # wait until download is complete.
 
 def get_location_metres(original_location, dNorth, dEast):
     """
@@ -125,41 +213,6 @@ def get_distance_metres(aLocation1, aLocation2):
     dlat = aLocation2.lat - aLocation1.lat
     dlong = aLocation2.lon - aLocation1.lon
     return math.sqrt((dlat*dlat)+(dlong*dlong))*1.113195e5 # 1.113195e5 is the number of metres per degree of lat/long
-
-def adds_square_mission(aLocation, aSize):
-    """
-    Adds a takeoff command and four waypoint commands to the current mission. 
-    The waypoints are positioned to form a square of side length 2*aSize around the specified LocationGlobal (aLocation).
-
-    The function assumes vehicle.commands matches the vehicle mission state 
-    (you must have called download at least once in the session and after clearing the mission)
-    """	
-
-    cmds = scout.commands
-
-    print(" Clear any existing commands")
-    cmds.clear() 
-    
-    print(" Define/add new commands.")
-    # Add new commands. The meaning/order of the parameters is documented in the Command class. 
-     
-    #Add MAV_CMD_NAV_TAKEOFF command. This is ignored if the vehicle is already in the air.
-    cmds.add(Command( 0, 0, 0, mavutil.mavlink.MAV_FRAME_GLOBAL_RELATIVE_ALT, mavutil.mavlink.MAV_CMD_NAV_TAKEOFF, 0, 0, 0, 0, 0, 0, 0, 0, 10))
-
-    #Define the four MAV_CMD_NAV_WAYPOINT locations and add the commands
-    point1 = get_location_metres(aLocation, aSize, -aSize)
-    point2 = get_location_metres(aLocation, aSize, aSize)
-    point3 = get_location_metres(aLocation, -aSize, aSize)
-    point4 = get_location_metres(aLocation, -aSize, -aSize)
-    cmds.add(Command( 0, 0, 0, mavutil.mavlink.MAV_FRAME_GLOBAL_RELATIVE_ALT, mavutil.mavlink.MAV_CMD_NAV_WAYPOINT, 0, 0, 0, 0, 0, 0, point1.lat, point1.lon, 11))
-    cmds.add(Command( 0, 0, 0, mavutil.mavlink.MAV_FRAME_GLOBAL_RELATIVE_ALT, mavutil.mavlink.MAV_CMD_NAV_WAYPOINT, 0, 0, 0, 0, 0, 0, point2.lat, point2.lon, 12))
-    cmds.add(Command( 0, 0, 0, mavutil.mavlink.MAV_FRAME_GLOBAL_RELATIVE_ALT, mavutil.mavlink.MAV_CMD_NAV_WAYPOINT, 0, 0, 0, 0, 0, 0, point3.lat, point3.lon, 13))
-    cmds.add(Command( 0, 0, 0, mavutil.mavlink.MAV_FRAME_GLOBAL_RELATIVE_ALT, mavutil.mavlink.MAV_CMD_NAV_WAYPOINT, 0, 0, 0, 0, 0, 0, point4.lat, point4.lon, 14))
-    #add dummy waypoint "5" at point 4 (lets us know when have reached destination)
-    cmds.add(Command( 0, 0, 0, mavutil.mavlink.MAV_FRAME_GLOBAL_RELATIVE_ALT, mavutil.mavlink.MAV_CMD_NAV_WAYPOINT, 0, 0, 0, 0, 0, 0, point4.lat, point4.lon, 14))    
-
-    print(" Upload new commands to vehicle")
-    cmds.upload()
     
 def distance_to_current_waypoint():
     """
@@ -206,59 +259,19 @@ def arm_and_takeoff(aTargetAltitude):
             print("Reached target altitude")
             break
         time.sleep(1)
-        
-#Send a velocity command with +x being the heading of the drone.
-def send_local_ned_velocity(vx, vy, vz):
-	msg = scout.message_factory.set_position_target_local_ned_encode(
-		0,
-		0, 0,
-		mavutil.mavlink.MAV_FRAME_BODY_OFFSET_NED,
-		0b0000111111000111,
-		0, 0, 0,
-		vx, vy, vz,
-		0, 0, 0,
-		0, 0)
-	scout.send_mavlink(msg)
-	scout.flush()
 
 def main():
-
-    #print('Create a new mission')
-    #adds_square_mission(scout.location.global_frame, 5)
-    #print("Drone's starting location: %s" % scout.location.global_frame)
-    
-    download_mission()
+    lissajous_search()
 
     arm_and_takeoff(10)
     print("Starting mission")
 
-    #scout.commands.next = 0
     scout.mode = VehicleMode("AUTO")
-
-    """
-    while True:
-        nextwaypoint=scout.commands.next
-        print('Distance to waypoint (%s): %s' % (nextwaypoint, distance_to_current_waypoint()))
-    
-        if nextwaypoint==3: #Skip to next waypoint
-            print('Skipping to Waypoint 5 when reach waypoint 3')
-            scout.commands.next = 5
-        if nextwaypoint==5: #Dummy waypoint - as soon as we reach waypoint 4 this is true and we exit.
-            print("Exit 'standard' mission when start heading to final waypoint (5)")
-            break;
-        time.sleep(1)
-    """
-
-    print("Flying 5m/s NORTH relative to the front of the drone for 25m")
-    counter = 0
-    while counter < 5 : # change counter based on speed
-        send_local_ned_velocity(5, 0, 0) #5m/s 
-        time.sleep(1) #pause 1 second
-        counter = counter + 1
+    while scout.mode !="AUTO":
+        time.sleep(.2)
 
     print('Return to launch')
     scout.mode = VehicleMode("RTL")
-
 
     #Close vehicle object before exiting script
     print("Close vehicle object")
