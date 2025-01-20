@@ -134,9 +134,9 @@ def lissajous_search():
     np.set_printoptions(precision=10)
     latitude_arr = np.arange(rows*columns, dtype=np.float64).reshape(rows, columns)
     for row in range(0, rows):
-    for col in range(0, columns):
-        latitude_arr[row][col] = CENTER_LAT +  (AMP_Y - row) * met_to_deg
-        #print(latitude_arr[row][col])
+        for col in range(0, columns):
+            latitude_arr[row][col] = CENTER_LAT +  (AMP_Y - row) * met_to_deg
+            #print(latitude_arr[row][col])
 
     # longitude varies with latitude degrees
     # new longitude = original longitude + (translation_mters * meters_to_degrees / cos(original long. * pi/180))
@@ -144,9 +144,9 @@ def lissajous_search():
     # negative translation -> move down
     longitude_arr = np.arange(rows*columns, dtype=np.float64).reshape(rows, columns)
     for row in range(0, rows):
-    for col in range(0, columns):
-        longitude_arr[row][col] = CENTER_LONG + ((AMP_X - col) * met_to_deg)/(math.cos(CENTER_LAT * (pi/180)))
-        #print(longitude_arr[row][col])
+        for col in range(0, columns):
+            longitude_arr[row][col] = CENTER_LONG + ((AMP_X - col) * met_to_deg)/(math.cos(CENTER_LAT * (pi/180)))
+            #print(longitude_arr[row][col])
 
     print("Add lissajous waypoints.")
      
@@ -160,7 +160,7 @@ def lissajous_search():
         cmds.add(Command( 0, 0, 0, mavutil.mavlink.MAV_FRAME_GLOBAL_RELATIVE_ALT, 
                                    mavutil.mavlink.MAV_CMD_NAV_WAYPOINT, 0, 0, 0, 0, 0, 0, 
                                    latitude_arr[-Y_point + AMP_Y][X_point + AMP_X], 
-                                   longitude_arr[-Y_point + AMP_Y][X_point + AMP_X], SCOUT_ALT))))
+                                   longitude_arr[-Y_point + AMP_Y][X_point + AMP_X], SCOUT_ALT))
 
     print("YAY Lissajous curve made ^_^")
 
@@ -265,10 +265,22 @@ def main():
 
     arm_and_takeoff(10)
     print("Starting mission")
+    
+    scout.commands.next = 0 # Reset mission set to first (0) waypoint
 
     scout.mode = VehicleMode("AUTO")
     while scout.mode !="AUTO":
         time.sleep(.2)
+        
+    while True:
+        next_waypoint = scout.commands.next
+        print('Distance to waypoint (%s): %s' %(next_waypoint, distance_to_current_waypoint()))
+        
+        if next_waypoint is T_MAX: #T_MAX is the last waypoint, make it an extra waypoint than is needed for lissajous
+            print("Exit 'standard' mission when last waypoint reached")
+            break;
+        
+        time.sleep(1)
 
     print('Return to launch')
     scout.mode = VehicleMode("RTL")
