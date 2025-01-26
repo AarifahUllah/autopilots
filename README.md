@@ -42,6 +42,7 @@ takeoff 15
 ```
 ### Helpful Links
 - MAVLink Commands in Guided Mode: https://ardupilot.org/dev/docs/copter-commands-in-guided-mode.html
+- MAVProxy for Multiple Vehicles: https://ardupilot.org/mavproxy/docs/getting_started/multi.html#multi
   
   <p> This is a bit misleading. These are some example commands you can send from Guided mode, but you can also program these in an Autonomous script flight. For example, you can say to mean fly 10 meters forward of the current position: </p>
   
