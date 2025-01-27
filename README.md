@@ -147,3 +147,4 @@ source /opt/ros/noetic/setup.bash
 - Gazebo Sim Fuel Models: https://app.gazebosim.org/fuel/models
 - SDF Gazebo Documentation: https://gazebosim.org/docs/latest/sdf_worlds/
 - SDF Documentaion: http://sdformat.org/tutorials?tut=spec_materials
+- Precision Landing on ArUco: https://www.youtube.com/watch?v=wlT_0fhGrGg
