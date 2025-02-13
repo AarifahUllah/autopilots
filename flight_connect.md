@@ -28,7 +28,7 @@ param set SR0_RAW_SENS 3
 param set SR0_RC_CHAN 3
 ```
 
-<p> This works, but our current Cube Pilot Orange runs MAVLink version 3 (a custom library mode), so we get some errors outputted but everything runs normally - the drone will fly. I hvan't tried this yet, but we can set it to MAVLink 2 within Mission Planner. <br>
+<p> This works, but our current Cube Pilot Orange runs MAVLink version 3 (a custom library mode), so we get some errors outputted but everything runs normally - the drone will fly. I haven't tried this yet, but we can set it to MAVLink 2 within Mission Planner. <br>
 Mission Planner -> Config -> Full Parameter List <br>
 and set: </p>
 
