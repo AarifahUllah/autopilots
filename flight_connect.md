@@ -6,7 +6,7 @@ port to speed up transmission too. Change connection permissions for ttyACM0.</p
 
 ```
 sudo chmod 666 /dev/ttyACM0
-mavproxy.py --master=dev/ttyACM0 -- baudrate 115200 --out=udp:127.0.0.1:14550
+mavproxy.py --master=/dev/ttyACM0 --baudrate 115200 --out=udp:127.0.0.1:14550
 ```
 
 <p>Then you'll run as normal the python auto script:</p>
