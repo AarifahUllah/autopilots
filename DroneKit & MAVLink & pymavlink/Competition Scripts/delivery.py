@@ -14,6 +14,10 @@ import time
 import math
 import argparse
 
+########CONSTANTS##################
+PACKAGE_ALT = 1 # in meters
+DROP_ALT = .3 
+
 ########CONNECTION BETWEEN FLIGHT COMPUTER AND CONTROLLER#################
 parser = argparse.ArgumentParser(description='Demonstrates basic mission operations.')
 parser.add_argument('--connect', help="vehicle connection target string. If not specified, SITL automatically started and used.")
@@ -65,15 +69,15 @@ def arm_and_takeoff(aTargetAltitude):
 
 def execute_mission(command):
     parts = command.split() # each command tokenized
-    elif parts[0] == "goto":
-        arm_and_takeoff(1) # low-flying
-        print('Going to Delivery location')
-  """
-  lat, lon, alt = map(float, parts[1:])
-  print(f"Moving Delivery drone to ({lat}, {lon}, {alt})...")
-  """
-        delivery_drone.simple_goto() # go to location
-        delivery_drone.simple_takeoff(.3) # lower closer to the ground
+    if parts[0] == "goto":
+        arm_and_takeoff(PACKAGE_ALT) # low-flying
+     
+        lat, lon, alt = map(float, parts[1:])
+        print(f"Delivery drone going to ({lat}, {lon})...")
+        drop_location = LocationGlobalRelative(lat, lon, PACKAGE_ALT) 
+        
+        delivery_drone.simple_goto(drop_location) # go to location
+        delivery_drone.simple_takeoff(DROP_ALT) # lower drone closer to the ground
 
         # drop the package
 
@@ -86,12 +90,12 @@ def execute_mission(command):
         
 # Message Listener
 def listen_for_messages():
-    #UAV1 will constantly be listening for messages from UAV2
+    # Delivery Drone will constantly be listening for messages from Scout
     while True:
         data, addr = server_socket.recvfrom(1024)
         command = data.decode()
         print(f"Received command: {command} from {addr}")
-        execute_command(command)
+        execute_mission(command)
 
 print('Package Delivery Mission')
 
