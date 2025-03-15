@@ -177,6 +177,29 @@ def get_distance_metres(aLocation1, aLocation2):
     dlat = aLocation2.lat - aLocation1.lat
     dlong = aLocation2.lon - aLocation1.lon
     return math.sqrt((dlat*dlat)+(dlong*dlong))*1.113195e5 # 1.113195e5 is the number of metres per degree of lat/long
+
+def marker_position_to_angle(x, y, z):
+    
+    angle_x = math.atan2(x,z)
+    angle_y = math.atan2(y,z)
+    
+    return (angle_x, angle_y)
+    
+def camera_to_uav(x_cam, y_cam):
+    x_uav =-y_cam
+    y_uav = x_cam
+    return(x_uav, y_uav)
+    
+def uav_to_ne(x_uav, y_uav, yaw_rad):
+    c       = math.cos(yaw_rad)
+    s       = math.sin(yaw_rad)
+    
+    north   = x_uav*c - y_uav*s
+    east    = x_uav*s + y_uav*c 
+    return(north, east)
+    
+def check_angle_descend(angle_x, angle_y, angle_desc):
+    return(math.sqrt(angle_x**2 + angle_y**2) <= angle_desc)
     
 def distance_to_current_waypoint():
     """
