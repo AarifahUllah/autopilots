@@ -327,12 +327,72 @@ class aruco_tracker():
         self.frame_queue = queue.Queue(maxsize=1)                                                   #A queue of frames to show, max size one because you dont want a line of frames to pile up
         self.cap = cv2.VideoCapture(0)                                                              #The video capture for the tracker should not chnage
         self.shutdown = False                                                                       #For manual shut down of tracker class, set to True
+
+        self.is_detected    = False
+        self._kill          = False # I'm thinking shutdown is the same
+
+        self._t_read      = time.time()
+        self._t_detect    = self._t_read
+        self.fps_read    = 0.0
+        self.fps_detect  = 0.0 
+
+        # Precision landing:
+        #--- 180 deg rotation matrix around the x axis
+        self._R_flip      = np.zeros((3,3), dtype=np.float32)
+        self._R_flip[0,0] = 1.0
+        self._R_flip[1,1] =-1.0
+        self._R_flip[2,2] =-1.0
+
+    def _rotationMatrixToEulerAngles(self,R):
+    # Calculates rotation matrix to euler angles
+    # The result is the same as MATLAB except the order
+    # of the euler angles ( x and z are swapped ).
+    
+        def isRotationMatrix(R):
+            Rt = np.transpose(R)
+            shouldBeIdentity = np.dot(Rt, R)
+            I = np.identity(3, dtype=R.dtype)
+            n = np.linalg.norm(I - shouldBeIdentity)
+            return n < 1e-6        
+        assert (isRotationMatrix(R))
+
+        sy = math.sqrt(R[0, 0] * R[0, 0] + R[1, 0] * R[1, 0])
+
+        singular = sy < 1e-6
+
+        if not singular:
+            x = math.atan2(R[2, 1], R[2, 2])
+            y = math.atan2(-R[2, 0], sy)
+            z = math.atan2(R[1, 0], R[0, 0])
+        else:
+            x = math.atan2(-R[1, 2], R[1, 1])
+            y = math.atan2(-R[2, 0], sy)
+            z = 0
+
+        return np.array([x, y, z])
+
+    def _update_fps_read(self):
+        t           = time.time()
+        self.fps_read    = 1.0/(t - self._t_read)
+        self._t_read      = t
+        
+    def _update_fps_detect(self):
+        t           = time.time()
+        self.fps_detect  = 1.0/(t - self._t_detect)
+        self._t_detect      = t    
+
+    def stop(self):
+        self._kill = True
+        self.shutdown = True
  
     #Simple search, only looks for the marker and does not do any POSE estimation or ML estimation    
     def search(self):
+        #marker_found = False
+        x = y = z = 0
  
         #This will condinue searching for a marker until either the correct marker is found or some shutdown signal is sent (self.shutdown)
         while self.found_marker is  None and self.shutdown is False:
+            self._update_fps_detect()
             ret, frame = self.cap.read()
  
             if not ret:
