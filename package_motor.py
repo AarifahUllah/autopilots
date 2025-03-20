@@ -47,3 +47,40 @@ try:
 finally:
     motorSpeed.stop()
     GPIO.cleanup()
+
+# type 2
+import RPi.GPIO as GPIO
+import time
+
+# Use BCM numbering
+GPIO.setmode(GPIO.BCM)
+
+# Define L298N control pins
+IN1 = 4
+IN2 = 5
+ENA = 6
+
+# Setup GPIO pins
+GPIO.setup(IN1, GPIO.OUT)
+GPIO.setup(IN2, GPIO.OUT)
+GPIO.setup(ENA, GPIO.OUT)
+
+# Enable motor (full speed)
+GPIO.output(ENA, True)
+
+print("Motor Forward")
+GPIO.output(IN1, True)
+GPIO.output(IN2, False)
+time.sleep(3)
+
+print("Motor Backward")
+GPIO.output(IN1, False)
+GPIO.output(IN2, True)
+time.sleep(3)
+
+print("Stopping motor")
+GPIO.output(IN1, False)
+GPIO.output(IN2, False)
+GPIO.output(ENA, False)
+
+GPIO.cleanup()
