@@ -37,17 +37,17 @@ W_X = 1                 # Angular frequency in X
 W_Y = 2                 # Angular frequency in Y
 PHI_X = pi / 2          # Phase shift in X
 PHI_Y = 0               # Phase shift in Y
-SCOUT_ALT = 10          # Search altitude in meters
+SCOUT_ALT = 7           # Search altitude in meters
 CENTER_LAT = -35.363262 # Field center latitude (for waypoint calculations)
 CENTER_LONG = 149.165237# Field center longitude
 EARTH_RADIUS = 6378.137   # km (used for degree-meter conversion)
 
 # --- Marker Landing Parameters ---
-TARGET_MARKER_ID = 0   # ID of the target ArUco marker
-MARKER_SIZE = 10        # Physical marker size in meters
-LAND_ALT_CM = 50.0      # Landing threshold altitude in meters (when marker is close)
+TARGET_MARKER_ID = 2   # ID of the target ArUco marker
+MARKER_SIZE = .3556    # Physical marker size in meters
+LAND_ALT = 3            # Landing threshold altitude in meters (when marker is close)
 ANGLE_DESCEND = 20 * (pi/180)  # Angular threshold (in radians) to allow descent
-LAND_SPEED_CMS = 30.0   # Descent speed in cm/s
+LAND_SPEED = 1   # Descent speed in m/s
 FREQ_SEND = 1.0         # Frequency (Hz) for sending landing commands
 
 # --- Camera Calibration and Video Settings ---
@@ -328,6 +328,9 @@ def main():
     tracker.start()
   
     lissajous_search() # Upload the search pattern mission
+
+    mission_start_time = time.time()
+    # log mission start time here
     arm_and_takeoff(SCOUT_ALT)
 
     print("Starting search mission in AUTO mode...")
@@ -337,61 +340,64 @@ def main():
     while scout.mode != "AUTO":
         time.sleep(0.2)
 
-    mission_start_time = time.time()
-    
-        while True:
-            # Check if marker has been detected
-            if tracker.found_marker is not None:
-                print("Aruco marker detected. Initiating landing sequence.")
-            
-                scout.mode = VehicleMode("GUIDED")
-                while scout.mode != "GUIDED":
-                    time.sleep(0.2)
-                  
-                # Enter marker-guided landing loop
-                while True:
-                    marker_data = tracker.found_marker
-                    if marker_data is None:
-                        break  # If marker lost, exit landing loop
-                    tvec = marker_data["tvec"]  # in centimeters
-                    # Convert from camera frame to UAV frame (still in centimeters)
-                    x_cam, y_cam, z_cam = tvec[0], tvec[1], tvec[2]
-                    x_uav, y_uav = camera_to_uav(x_cam, y_cam)
-                    current_location = scout.location.global_relative_frame
-                    yaw = scout.attitude.yaw
-                  
-                    # Convert offsets from cm to meters for guidance
-                    north_offset, east_offset = uav_to_ne(x_uav / 100.0, y_uav / 100.0, yaw)
-                    marker_lat, marker_lon = get_location_metres(current_location, north_offset, east_offset)
-                    angle_x, angle_y = marker_position_to_angle(x_uav / 100.0, y_uav / 100.0, z_cam / 100.0)
-                  
-                    # If the angular error is within threshold, command a descent.
-                    if check_angle_descend(angle_x, angle_y, ANGLE_DESCEND):
-                        print("Low angular error. Descending.")
-                        new_alt = current_location.alt - (LAND_SPEED_CMS * 0.01 / FREQ_SEND)
-                    else:
-                        new_alt = current_location.alt
-                    target_location = LocationGlobalRelative(marker_lat, marker_lon, new_alt)
-                    scout.simple_goto(target_location)
-                    print("UAV: Lat=%.7f, Lon=%.7f, Alt=%.2f" % (current_location.lat, current_location.lon, current_location.alt))
-                    print("Commanding: Lat=%.7f, Lon=%.7f, Alt=%.2f" % (marker_lat, marker_lon, new_alt))
-                    time.sleep(1.0 / FREQ_SEND)
-                    # If the marker is very close or altitude is low, initiate landing.
-                    if (z_cam <= LAND_ALT) or (new_alt <= 0.5):
-                        print("Landing criteria met. Switching to LAND mode.")
-                        scout.mode = VehicleMode("LAND")
-                        break
-                break  # Exit the outer mission loop once landing is initiated.
+    while True:
+        # Check if marker has been detected
+        if tracker.found_marker is not None:
+            print("Aruco marker detected. Initiating landing sequence.")
+        
+            scout.mode = VehicleMode("GUIDED") # Scout pauses following waypoints
+            while scout.mode != "GUIDED":
+                time.sleep(0.2)
+                
+            # Enter marker-guided landing loop
+            while True:
+                marker_data = tracker.found_marker
+                if marker_data is None:
+                    break  # If marker lost, exit landing loop
+                    
+                tvec = marker_data["tvec"]  # in centimeters
+                # Convert from camera frame to UAV frame (still in centimeters)
+                x_cam, y_cam, z_cam = tvec[0], tvec[1], tvec[2]
+                x_uav, y_uav = camera_to_uav(x_cam, y_cam)
+                current_location = scout.location.global_relative_frame
+                yaw = scout.attitude.yaw
+                
+                # Convert offsets from cm to meters for guidance
+                north_offset, east_offset = uav_to_ne(x_uav / 100.0, y_uav / 100.0, yaw)
+                marker_lat, marker_lon = get_location_metres(current_location, north_offset, east_offset)
 
-            # continue following waypoints if no marker is detected
+                angle_x, angle_y = marker_position_to_angle(x_uav / 100.0, y_uav / 100.0, z_cam / 100.0)
+                
+                # If the angular error is within threshold, command a descent.
+                if check_angle_descend(angle_x, angle_y, ANGLE_DESCEND):
+                    print("Low angular error. Descending.")
+                    new_alt = current_location.alt - (LAND_SPEED * 0.01 / FREQ_SEND)
+                else:
+                    new_alt = current_location.alt
+                target_location = LocationGlobalRelative(marker_lat, marker_lon, new_alt)
+                scout.simple_goto(target_location)
 
-            if scout.commands.next is T_MAX: # T_MAX is the last waypoint in the list
-                print("Search mission complete. No marker found. Returning to launch.")
-                scout.mode = VehicleMode("RTL")
-                time.sleep(5)
-                break
+                print("Scout Location: Lat=%.7f, Lon=%.7f, Alt=%.2f" % (current_location.lat, current_location.lon, current_location.alt))
+                print("Marker Location: Lat=%.7f, Lon=%.7f, Alt=%.2f" % (marker_lat, marker_lon, new_alt))
+                # Add logging here for marker location, and optional scout location
+                time.sleep(1.0 / FREQ_SEND)
 
-            time.sleep(1)
+                # If the marker is very close or altitude is low, initiate landing.
+                if (z_cam <= LAND_ALT) or (new_alt <= 1):
+                    print("Landing criteria met. Switching to LAND mode.")
+                    scout.mode = VehicleMode("LAND")
+                    break
+            break  # Exit the outer mission loop once landing is initiated.
+
+        # continue following waypoints if no marker is detected
+
+        if scout.commands.next is T_MAX: # T_MAX is the last waypoint in the list
+            print("Search mission complete. No marker found. Returning to launch.")
+            scout.mode = VehicleMode("RTL")
+            time.sleep(5)
+            break
+
+        time.sleep(1)
     
     print("Mission complete. Cleaning up...")
     tracker.shutdown_flag = True
